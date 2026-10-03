@@ -19,10 +19,10 @@ export default function ServiceRow({
     return (
       <Link
         href={`/services#${service.slug}`}
-        className="group block border-t border-[#092948]/15 pt-6 pb-8 transition-colors duration-200 focus-ring-light min-h-[48px]"
+        className="group flex flex-col h-full border-t border-[#092948]/15 pt-6 pb-8 transition-colors duration-200 focus-ring-light"
       >
         {/* Thumbnail Image */}
-        <div className="relative aspect-[16/9] w-full overflow-hidden mb-5 bg-[#092948]/5 rounded-[2px]">
+        <div className="relative aspect-[16/10] w-full overflow-hidden mb-5 bg-[#092948]/5 rounded-[2px] border border-[#092948]/10">
           <Image
             src={service.image}
             alt={service.imageAlt || service.name}
@@ -32,25 +32,30 @@ export default function ServiceRow({
           />
         </div>
 
-        {/* Number and Arrow Header */}
-        <div className="flex items-center justify-between mb-2">
-          <span className="text-xs font-mono tracking-widest text-[#316A7E] font-medium">
-            {service.number}
-          </span>
-          <span className="w-7 h-7 rounded-full border border-[#092948]/30 flex items-center justify-center text-[#092948] transition-all duration-200 group-hover:border-[#092948] group-hover:bg-[#092948] group-hover:text-[#FEEED7]">
-            <ArrowUpRight className="w-3.5 h-3.5 stroke-[2]" />
-          </span>
+        {/* Card Content Area */}
+        <div className="flex flex-col flex-1 justify-between">
+          <div>
+            {/* Number and Arrow Header */}
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-xs font-mono tracking-widest text-[#316A7E] font-medium">
+                {service.number}
+              </span>
+              <span className="w-7 h-7 rounded-full border border-[#092948]/30 flex items-center justify-center text-[#092948] transition-all duration-200 group-hover:border-[#092948] group-hover:bg-[#092948] group-hover:text-[#FEEED7]">
+                <ArrowUpRight className="w-3.5 h-3.5 stroke-[2]" />
+              </span>
+            </div>
+
+            {/* Service Name */}
+            <h3 className="font-serif text-xl sm:text-2xl text-[#092948] font-medium mb-2 group-hover:text-[#316A7E] transition-colors leading-snug">
+              {service.name}
+            </h3>
+
+            {/* Description */}
+            <p className="text-xs sm:text-sm text-[#092948]/80 leading-relaxed line-clamp-3 min-h-[3rem]">
+              {service.tagline}
+            </p>
+          </div>
         </div>
-
-        {/* Service Name */}
-        <h3 className="font-serif text-xl sm:text-2xl text-[#092948] font-medium mb-2 group-hover:text-[#316A7E] transition-colors">
-          {service.name}
-        </h3>
-
-        {/* Description */}
-        <p className="text-xs sm:text-sm text-[#092948]/80 leading-relaxed line-clamp-3">
-          {service.tagline}
-        </p>
       </Link>
     );
   }

@@ -32,7 +32,7 @@ export const PROJECTS: ProjectItem[] = [
     image: "/images/project-maddy-voice.jpg",
     imageAlt: "Maddy Voice smartphone app interface showing speech waveform and clinical draft notes",
     featured: true,
-    aspect: "4:5",
+    aspect: "16:10",
     metrics: [
       "68% Reduction in documentation time",
       "99.4% Accuracy on specialized medical terminology",
