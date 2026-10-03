@@ -26,8 +26,8 @@ export default function ApproachSection() {
               </em>
             </h2>
 
-            <p className="text-base sm:text-lg text-[#FEEED7]/80 leading-relaxed max-w-lg pt-4">
-              We eliminate technical ambiguity through methodical inquiry, precise system architecture, and iterative deployment. Every project follows a clear pathway from first principles to enterprise endurance.
+            <p className="text-base sm:text-lg text-[#FEEED7]/85 leading-relaxed max-w-lg pt-4 font-normal">
+              Our approach is simple: understand the problem, find the right direction, and engineer a solution that works. We focus on building technology that is purposeful, reliable, scalable, and designed to create lasting value.
             </p>
           </div>
 

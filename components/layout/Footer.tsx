@@ -15,14 +15,14 @@ export default function Footer() {
           <div className="space-y-4">
             <MasaarLogo variant="cream" width={180} height={64} />
             <p className="text-sm text-[#FEEED7]/80 leading-relaxed max-w-sm pt-2">
-              Building AI solutions, modern products and intelligent digital architectures for businesses, institutions and communities worldwide.
+              Turning ideas into practical, real-world solutions. We combine engineering, technology, design, and innovation.
             </p>
             <div className="pt-2">
               <span className="text-xs uppercase tracking-[0.2em] text-[#619AAA] font-medium block">
-                Concept
+                Philosophy
               </span>
               <p className="text-xs text-[#FEEED7]/70 mt-1">
-                مسار (Masaar) — Arabic for &quot;Pathway / Route&quot;
+                Masaar (مسار) — Path, course, or direction. Ideas, engineered into existence.
               </p>
             </div>
           </div>

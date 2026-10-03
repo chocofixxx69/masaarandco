@@ -6,7 +6,7 @@ export const siteConfig = {
   url: "https://masaar.co",
   ogImage: "https://masaar.co/brand/masaar-logo.jpg",
   description:
-    "Masaar & Co. is a technology company building AI solutions, modern products and intelligent systems for businesses, institutions and communities.",
+    "Masaar & Co. is a technology and solutions company focused on turning ideas into practical, real-world solutions. Ideas, engineered into existence.",
   contactEmail: "contact@masaar.co",
 };
 

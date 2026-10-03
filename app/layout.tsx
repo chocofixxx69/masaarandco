@@ -29,18 +29,19 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://masaar.co"),
   title: {
-    default: "Masaar & Co. | Pathway to Technology & AI Solutions",
+    default: "Masaar & Co. | Ideas, Engineered into Existence",
     template: "%s | Masaar & Co.",
   },
   description:
-    "Masaar & Co. is a technology company building AI solutions, modern products and intelligent systems for businesses, institutions and communities.",
+    "Masaar & Co. is a technology and solutions company focused on turning ideas into practical, real-world solutions. Ideas, engineered into existence.",
   keywords: [
     "Masaar & Co",
+    "Ideas Engineered into Existence",
     "AI Solutions",
-    "Product Development",
-    "Digital Transformation",
-    "Technology Consulting",
-    "Intelligent Systems",
+    "Digital Products",
+    "Software Development",
+    "Cloud Infrastructure",
+    "Automation",
   ],
   authors: [{ name: "Masaar & Co." }],
   creator: "Masaar & Co.",
@@ -49,9 +50,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://masaar.co",
     siteName: "Masaar & Co.",
-    title: "Masaar & Co. | Technology for What's Next",
+    title: "Masaar & Co. | Ideas, Engineered into Existence",
     description:
-      "Building AI solutions, modern products and intelligent systems for businesses, institutions and communities.",
+      "Turning ideas into practical, real-world solutions. We combine engineering, technology, design, and innovation.",
     images: [
       {
         url: "/brand/masaar-logo.jpg",

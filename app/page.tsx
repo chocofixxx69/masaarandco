@@ -32,7 +32,7 @@ export default function HomePage() {
         <EditorialBlock
           heading="From Ideas to Impact"
           italicWord="Impact"
-          paragraph="Masaar & Co. is a technology company building AI solutions, modern products and intelligent systems for businesses, institutions and communities."
+          paragraph="Masaar & Co. is a technology and solutions company focused on turning ideas into practical, real-world solutions. We combine engineering, technology, design, and innovation to build digital products, intelligent systems, software, automation, and infrastructure."
           ctaText="Our Services"
           ctaHref="/services"
         />

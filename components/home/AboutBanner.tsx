@@ -13,29 +13,32 @@ export default function AboutBanner() {
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 pb-10">
           <div className="space-y-3 max-w-2xl">
             <p className="font-caps-label text-[#316A7E] text-xs tracking-[0.2em]">
-              About Masaar &amp; Co.
+              About Masaar &amp; Co. — مسار
             </p>
             <h2
               id="about-banner-heading"
               className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#092948] font-normal leading-[1.1]"
             >
-              A Global Technology Company with a Clear{" "}
+              Ideas, Engineered into{" "}
               <em className="italic text-[#316A7E] font-normal font-serif">
-                Direction.
+                Existence.
               </em>
             </h2>
           </div>
 
-          <div className="max-w-md space-y-4">
-            <p className="text-sm sm:text-base text-[#000000]/80 leading-relaxed">
-              We are a team of builders, thinkers and problem solvers focused on creating technology that helps people and organizations move forward.
+          <div className="max-w-lg space-y-4">
+            <p className="text-sm sm:text-base text-[#000000]/80 leading-relaxed font-normal">
+              The name <strong>Masaar (مسار)</strong> means path, course, or direction in Arabic. It reflects the journey behind everything we build — from an initial idea to something tangible, useful, and ready for the real world.
+            </p>
+            <p className="text-xs sm:text-sm text-[#316A7E] font-medium italic">
+              &ldquo;We don’t just imagine what could exist. We engineer it into existence.&rdquo;
             </p>
             <div>
               <Link
                 href="/about"
                 className="inline-flex items-center gap-2 rounded-full border border-[#092948] px-5 py-2 text-xs uppercase tracking-wider font-medium text-[#092948] hover:bg-[#092948] hover:text-[#FEEED7] transition-all"
               >
-                <span>Our Story</span>
+                <span>Read Our Story</span>
                 <span className="font-mono">↗</span>
               </Link>
             </div>
@@ -51,7 +54,7 @@ export default function AboutBanner() {
             sizes="100vw"
             className="object-cover object-[center_35%]"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#092948]/20 to-transparent pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#092948]/25 via-transparent to-transparent pointer-events-none" />
         </div>
       </div>
     </section>
