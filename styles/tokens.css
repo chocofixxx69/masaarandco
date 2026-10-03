@@ -1,0 +1,28 @@
+:root {
+  /* Masaar & Co. Primary Tokens */
+  --primary: #092948;
+  --secondary: #316A7E;
+  --accent: #619AAA;
+  --natural: #FEEED7;
+  --surface: #FFFFFF;
+  --precision: #000000;
+
+  /* Derived Alpha Borders */
+  --border-light: rgba(9, 41, 72, 0.15);
+  --border-dark: rgba(254, 238, 215, 0.25);
+  --border-hairline: rgba(9, 41, 72, 0.12);
+
+  /* Functional Feedback */
+  --error: #B3261E;
+  --success: #1E6B4F;
+
+  /* Motion */
+  --ease-pathway: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-feedback: 200ms;
+  --duration-reveal: 500ms;
+  --duration-hero: 900ms;
+
+  /* Layout */
+  --container-max: 1440px;
+  --content-max: 1280px;
+}

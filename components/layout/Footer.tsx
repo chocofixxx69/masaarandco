@@ -1,0 +1,132 @@
+import React from "react";
+import Link from "next/link";
+import MasaarLogo from "@/components/ui/MasaarLogo";
+import { COMPANY } from "@/content/company";
+
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="bg-[#092948] text-[#FEEED7] pt-16 md:pt-24 pb-12 border-t border-[rgba(254,238,215,0.15)] relative overflow-hidden">
+      <div className="max-w-[1440px] mx-auto px-5 sm:px-6 md:px-10 lg:px-16">
+        {/* Top 4-Col Grid (Desktop 4-col -> Mobile single column) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 pb-16">
+          {/* Col 1: Brand & Meaning */}
+          <div className="space-y-4">
+            <MasaarLogo variant="cream" width={180} height={64} />
+            <p className="text-sm text-[#FEEED7]/80 leading-relaxed max-w-sm pt-2">
+              Building AI solutions, modern products and intelligent digital architectures for businesses, institutions and communities worldwide.
+            </p>
+            <div className="pt-2">
+              <span className="text-xs uppercase tracking-[0.2em] text-[#619AAA] font-medium block">
+                Concept
+              </span>
+              <p className="text-xs text-[#FEEED7]/70 mt-1">
+                مسار (Masaar) — Arabic for &quot;Pathway / Route&quot;
+              </p>
+            </div>
+          </div>
+
+          {/* Col 2: Navigation Links */}
+          <div>
+            <h4 className="text-xs uppercase tracking-[0.2em] text-[#619AAA] font-medium mb-5">
+              Navigation
+            </h4>
+            <ul className="space-y-3">
+              {COMPANY.navLinks.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-sm text-[#FEEED7]/80 hover:text-[#FFFFFF] transition-colors focus-ring-dark"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Col 3: Services */}
+          <div>
+            <h4 className="text-xs uppercase tracking-[0.2em] text-[#619AAA] font-medium mb-5">
+              Solutions
+            </h4>
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  href="/services#ai-solutions"
+                  className="text-sm text-[#FEEED7]/80 hover:text-[#FFFFFF] transition-colors"
+                >
+                  AI Solutions &amp; Automation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services#product-development"
+                  className="text-sm text-[#FEEED7]/80 hover:text-[#FFFFFF] transition-colors"
+                >
+                  Product Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services#digital-transformation"
+                  className="text-sm text-[#FEEED7]/80 hover:text-[#FFFFFF] transition-colors"
+                >
+                  Digital Transformation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/work"
+                  className="text-sm text-[#FEEED7]/80 hover:text-[#FFFFFF] transition-colors"
+                >
+                  Selected Work &amp; Case Studies
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Col 4: Presence & Inquiries */}
+          <div>
+            <h4 className="text-xs uppercase tracking-[0.2em] text-[#619AAA] font-medium mb-5">
+              Inquiries
+            </h4>
+            <p className="text-sm text-[#FEEED7]/80 mb-2">Direct communication:</p>
+            <a
+              href={`mailto:${COMPANY.contact.email}`}
+              className="text-sm font-medium text-[#FEEED7] hover:text-[#619AAA] underline decoration-[#619AAA]/50 underline-offset-4 transition-colors block mb-4"
+            >
+              {COMPANY.contact.email}
+            </a>
+            <div className="pt-2">
+              <span className="text-xs uppercase tracking-[0.2em] text-[#619AAA] font-medium block">
+                Offices
+              </span>
+              <p className="text-xs text-[#FEEED7]/70 mt-1">
+                Riyadh · Dubai · London
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Structural Pathway Baseline */}
+        <div className="pathway-rule-dark" aria-hidden="true" />
+
+        {/* Bottom Bar */}
+        <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-xs text-[#FEEED7]/60">
+          <div>
+            &copy; {currentYear} Masaar &amp; Co. Technology Group. All rights reserved.
+          </div>
+          <div className="flex items-center space-x-6">
+            <span className="hover:text-[#FEEED7] cursor-pointer">Privacy Policy</span>
+            <span className="text-[#FEEED7]/30">·</span>
+            <span className="hover:text-[#FEEED7] cursor-pointer">Terms of Engagement</span>
+            <span className="text-[#FEEED7]/30">·</span>
+            <span className="hover:text-[#FEEED7] cursor-pointer">Security Overview</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}
