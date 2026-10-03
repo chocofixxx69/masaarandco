@@ -30,7 +30,7 @@ export default function ErrorState({
           <button
             type="button"
             onClick={onRetry}
-            className="rounded-full bg-[#092948] text-[#FEEED7] px-6 py-2 text-sm font-medium hover:bg-[#316A7E] transition-colors focus-ring-light"
+            className="rounded-full bg-[#092948] text-[#F9F1E7] px-6 py-2 text-sm font-medium hover:bg-[#316A7E] transition-colors focus-ring-light"
           >
             {resetText}
           </button>

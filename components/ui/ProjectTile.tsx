@@ -53,7 +53,7 @@ export default function ProjectTile({
             <h3 className="font-serif text-xl sm:text-2xl text-[#092948] font-normal leading-snug group-hover:underline underline-offset-4 decoration-[#316A7E] transition-colors">
               {project.title}
             </h3>
-            <span className="w-7 h-7 flex-shrink-0 rounded-full border border-[#092948]/30 flex items-center justify-center text-[#092948] group-hover:bg-[#092948] group-hover:text-[#FEEED7] group-hover:border-[#092948] transition-all duration-200 mt-0.5">
+            <span className="w-7 h-7 flex-shrink-0 rounded-full border border-[#092948]/30 flex items-center justify-center text-[#092948] group-hover:bg-[#092948] group-hover:text-[#F9F1E7] group-hover:border-[#092948] transition-all duration-200 mt-0.5">
               <ArrowUpRight className="w-3.5 h-3.5 stroke-[2]" />
             </span>
           </div>

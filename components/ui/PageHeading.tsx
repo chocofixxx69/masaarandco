@@ -54,7 +54,7 @@ export default function PageHeading({
 
       <h1
         className={`font-h1 tracking-tight leading-[1.05] ${
-          isDark ? "text-[#FEEED7]" : "text-[#092948]"
+          isDark ? "text-[#F9F1E7]" : "text-[#092948]"
         }`}
       >
         {titleContent}
@@ -63,7 +63,7 @@ export default function PageHeading({
       {description && (
         <p
           className={`text-base md:text-lg leading-relaxed max-w-2xl ${
-            isDark ? "text-[#FEEED7]/80" : "text-[#000000]/80"
+            isDark ? "text-[#F9F1E7]/80" : "text-[#000000]/80"
           } ${align === "center" ? "mx-auto" : ""}`}
         >
           {description}

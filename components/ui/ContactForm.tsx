@@ -122,7 +122,7 @@ export default function ContactForm({ initialService = "" }: ContactFormProps) {
           <button
             type="button"
             onClick={resetForm}
-            className="mt-6 inline-flex items-center gap-2 rounded-full border border-[#092948] px-6 py-2 text-xs uppercase tracking-wider font-medium text-[#092948] hover:bg-[#092948] hover:text-[#FEEED7] transition-all"
+            className="mt-6 inline-flex items-center gap-2 rounded-full border border-[#092948] px-6 py-2 text-xs uppercase tracking-wider font-medium text-[#092948] hover:bg-[#092948] hover:text-[#F9F1E7] transition-all"
           >
             Submit Another Request
           </button>
@@ -182,7 +182,7 @@ export default function ContactForm({ initialService = "" }: ContactFormProps) {
             onChange={handleChange}
             aria-invalid={Boolean(fieldErrors.name)}
             aria-describedby={fieldErrors.name ? "name-error" : undefined}
-            className={`w-full px-4 py-3 text-base text-[#000000] bg-[#FEEED7]/20 border rounded-[2px] transition-colors focus:outline-none ${
+            className={`w-full px-4 py-3 text-base text-[#000000] bg-[#F9F1E7]/20 border rounded-[2px] transition-colors focus:outline-none ${
               fieldErrors.name
                 ? "border-[#B3261E] focus:border-[#B3261E] bg-[#B3261E]/5"
                 : "border-[#092948]/20 focus:border-[#092948] focus:bg-[#FFFFFF]"
@@ -214,7 +214,7 @@ export default function ContactForm({ initialService = "" }: ContactFormProps) {
             onChange={handleChange}
             aria-invalid={Boolean(fieldErrors.email)}
             aria-describedby={fieldErrors.email ? "email-error" : undefined}
-            className={`w-full px-4 py-3 text-base text-[#000000] bg-[#FEEED7]/20 border rounded-[2px] transition-colors focus:outline-none ${
+            className={`w-full px-4 py-3 text-base text-[#000000] bg-[#F9F1E7]/20 border rounded-[2px] transition-colors focus:outline-none ${
               fieldErrors.email
                 ? "border-[#B3261E] focus:border-[#B3261E] bg-[#B3261E]/5"
                 : "border-[#092948]/20 focus:border-[#092948] focus:bg-[#FFFFFF]"
@@ -245,7 +245,7 @@ export default function ContactForm({ initialService = "" }: ContactFormProps) {
             autoComplete="organization"
             value={formData.company}
             onChange={handleChange}
-            className="w-full px-4 py-3 text-base text-[#000000] bg-[#FEEED7]/20 border border-[#092948]/20 rounded-[2px] focus:outline-none focus:border-[#092948] focus:bg-[#FFFFFF] transition-colors"
+            className="w-full px-4 py-3 text-base text-[#000000] bg-[#F9F1E7]/20 border border-[#092948]/20 rounded-[2px] focus:outline-none focus:border-[#092948] focus:bg-[#FFFFFF] transition-colors"
             placeholder="Entity name"
           />
         </div>
@@ -262,7 +262,7 @@ export default function ContactForm({ initialService = "" }: ContactFormProps) {
             name="service"
             value={formData.service}
             onChange={handleChange}
-            className="w-full px-4 py-3 text-base text-[#000000] bg-[#FEEED7]/20 border border-[#092948]/20 rounded-[2px] focus:outline-none focus:border-[#092948] focus:bg-[#FFFFFF] transition-colors"
+            className="w-full px-4 py-3 text-base text-[#000000] bg-[#F9F1E7]/20 border border-[#092948]/20 rounded-[2px] focus:outline-none focus:border-[#092948] focus:bg-[#FFFFFF] transition-colors"
           >
             <option value="Business Automation">01 — Business Automation</option>
             <option value="AI, Chatbots & Voice Agents">02 — AI, Chatbots &amp; Voice Agents</option>
@@ -294,7 +294,7 @@ export default function ContactForm({ initialService = "" }: ContactFormProps) {
           name="budget"
           value={formData.budget}
           onChange={handleChange}
-          className="w-full px-4 py-3 text-base text-[#000000] bg-[#FEEED7]/20 border border-[#092948]/20 rounded-[2px] focus:outline-none focus:border-[#092948] focus:bg-[#FFFFFF] transition-colors"
+          className="w-full px-4 py-3 text-base text-[#000000] bg-[#F9F1E7]/20 border border-[#092948]/20 rounded-[2px] focus:outline-none focus:border-[#092948] focus:bg-[#FFFFFF] transition-colors"
         >
           <option value="">Select scope tier...</option>
           <option value="50k-100k">$50,000 — $100,000 (Targeted Architecture)</option>
@@ -321,7 +321,7 @@ export default function ContactForm({ initialService = "" }: ContactFormProps) {
           onChange={handleChange}
           aria-invalid={Boolean(fieldErrors.message)}
           aria-describedby={fieldErrors.message ? "message-error" : undefined}
-          className={`w-full px-4 py-3 text-base text-[#000000] bg-[#FEEED7]/20 border rounded-[2px] transition-colors focus:outline-none ${
+          className={`w-full px-4 py-3 text-base text-[#000000] bg-[#F9F1E7]/20 border rounded-[2px] transition-colors focus:outline-none ${
             fieldErrors.message
               ? "border-[#B3261E] focus:border-[#B3261E] bg-[#B3261E]/5"
               : "border-[#092948]/20 focus:border-[#092948] focus:bg-[#FFFFFF]"
@@ -345,7 +345,7 @@ export default function ContactForm({ initialService = "" }: ContactFormProps) {
           type="submit"
           disabled={status === "submitting"}
           aria-busy={status === "submitting"}
-          className="inline-flex items-center justify-center gap-2 rounded-full bg-[#092948] px-8 py-3 text-[0.9375rem] font-medium text-[#FEEED7] hover:bg-[#316A7E] transition-all duration-200 disabled:opacity-50 cursor-pointer focus-ring-light"
+          className="inline-flex items-center justify-center gap-2 rounded-full bg-[#092948] px-8 py-3 text-[0.9375rem] font-medium text-[#F9F1E7] hover:bg-[#316A7E] transition-all duration-200 disabled:opacity-50 cursor-pointer focus-ring-light"
         >
           {status === "submitting" ? (
             <>

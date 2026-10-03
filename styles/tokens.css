@@ -3,13 +3,13 @@
   --primary: #092948;
   --secondary: #316A7E;
   --accent: #619AAA;
-  --natural: #FEEED7;
+  --natural: #F9F1E7;
   --surface: #FFFFFF;
   --precision: #000000;
 
   /* Derived Alpha Borders */
   --border-light: rgba(9, 41, 72, 0.15);
-  --border-dark: rgba(254, 238, 215, 0.25);
+  --border-dark: rgba(249, 241, 231, 0.25);
   --border-hairline: rgba(9, 41, 72, 0.12);
 
   /* Functional Feedback */

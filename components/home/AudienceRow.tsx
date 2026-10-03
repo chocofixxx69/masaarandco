@@ -12,7 +12,7 @@ export default function AudienceRow() {
 
   return (
     <section
-      className="py-12 md:py-16 border-b border-[#092948]/15 bg-[#FEEED7]"
+      className="py-12 md:py-16 border-b border-[#092948]/15 bg-[#F9F1E7]"
       aria-label="Target Sectors"
     >
       <div className="max-w-[1440px] mx-auto px-5 sm:px-6 md:px-10 lg:px-16">

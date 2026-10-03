@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 export default function ContactBand() {
   return (
     <section
-      className="py-20 md:py-32 bg-[#092948] text-[#FEEED7] relative overflow-hidden"
+      className="py-20 md:py-32 bg-[#092948] text-[#F9F1E7] relative overflow-hidden"
       aria-labelledby="contact-band-title"
     >
       <div className="max-w-[1440px] mx-auto px-5 sm:px-6 md:px-10 lg:px-16">
@@ -18,7 +18,7 @@ export default function ContactBand() {
           <div className="lg:col-span-7 space-y-8">
             <h2
               id="contact-band-title"
-              className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.05] tracking-tight text-[#FEEED7]"
+              className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.05] tracking-tight text-[#F9F1E7]"
             >
               Have a Project in{" "}
               <em className="italic text-[#619AAA] font-serif font-normal">
@@ -26,14 +26,14 @@ export default function ContactBand() {
               </em>
             </h2>
 
-            <p className="text-base sm:text-lg text-[#FEEED7]/80 leading-relaxed max-w-xl">
+            <p className="text-base sm:text-lg text-[#F9F1E7]/80 leading-relaxed max-w-xl">
               Whether you are architecting a new AI system, launching a mission-critical web application, or modernizing institutional infrastructure, we provide the pathway forward.
             </p>
 
             <div className="pt-2">
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-3 rounded-full border border-[rgba(254,238,215,0.4)] px-8 py-3.5 text-[0.9375rem] font-medium text-[#FEEED7] hover:bg-[#316A7E] hover:border-[#316A7E] hover:text-[#FFFFFF] transition-all duration-200 focus-ring-dark"
+                className="group inline-flex items-center gap-3 rounded-full border border-[rgba(249,241,231,0.4)] px-8 py-3.5 text-[0.9375rem] font-medium text-[#F9F1E7] hover:bg-[#316A7E] hover:border-[#316A7E] hover:text-[#FFFFFF] transition-all duration-200 focus-ring-dark"
               >
                 <span>Get In Touch</span>
                 <span className="w-5 h-5 rounded-full border border-current flex items-center justify-center p-0.5 group-hover:scale-110 transition-transform">
@@ -44,12 +44,12 @@ export default function ContactBand() {
           </div>
 
           {/* Right Column: Pillars (cols 8-12) */}
-          <div className="lg:col-span-5 lg:pl-10 lg:border-l lg:border-[rgba(254,238,215,0.2)]">
+          <div className="lg:col-span-5 lg:pl-10 lg:border-l lg:border-[rgba(249,241,231,0.2)]">
             <div className="space-y-4">
               <p className="text-xs uppercase tracking-[0.25em] text-[#619AAA] font-medium">
                 Core Philosophy
               </p>
-              <div className="space-y-2 text-sm sm:text-base text-[#FEEED7]/80 tracking-wide font-sans">
+              <div className="space-y-2 text-sm sm:text-base text-[#F9F1E7]/80 tracking-wide font-sans">
                 <p className="hover:text-[#FFFFFF] transition-colors">People</p>
                 <p className="hover:text-[#FFFFFF] transition-colors">Ideas</p>
                 <p className="hover:text-[#FFFFFF] transition-colors">Technology</p>

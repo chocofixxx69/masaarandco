@@ -5,7 +5,7 @@ import { COMPANY } from "@/content/company";
 export default function StatsBand() {
   return (
     <section
-      className="py-12 md:py-20 border-t border-b border-[#092948]/15 bg-[#FEEED7]"
+      className="py-12 md:py-20 border-t border-b border-[#092948]/15 bg-[#F9F1E7]"
       aria-label="Key Performance Indicators"
     >
       <div className="max-w-[1440px] mx-auto px-5 sm:px-6 md:px-10 lg:px-16">

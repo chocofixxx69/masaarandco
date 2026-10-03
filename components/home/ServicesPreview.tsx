@@ -9,7 +9,7 @@ export default function ServicesPreview() {
 
   return (
     <section
-      className="py-16 md:py-28 bg-[#FEEED7]"
+      className="py-16 md:py-28 bg-[#F9F1E7]"
       aria-labelledby="services-preview-title"
     >
       <div className="max-w-[1440px] mx-auto px-5 sm:px-6 md:px-10 lg:px-16">
@@ -37,7 +37,7 @@ export default function ServicesPreview() {
             <div>
               <Link
                 href="/services"
-                className="inline-flex items-center gap-2 rounded-full border border-[#092948] px-5 py-2 text-xs uppercase tracking-wider font-medium text-[#092948] hover:bg-[#092948] hover:text-[#FEEED7] transition-all"
+                className="inline-flex items-center gap-2 rounded-full border border-[#092948] px-5 py-2 text-xs uppercase tracking-wider font-medium text-[#092948] hover:bg-[#092948] hover:text-[#F9F1E7] transition-all"
               >
                 <span>View All 12 Services</span>
                 <span className="font-mono">↗</span>
@@ -79,7 +79,7 @@ export default function ServicesPreview() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-full bg-[#092948] px-6 py-2.5 text-xs uppercase tracking-wider font-medium text-[#FEEED7] hover:bg-[#316A7E] transition-all whitespace-nowrap"
+            className="inline-flex items-center gap-2 rounded-full bg-[#092948] px-6 py-2.5 text-xs uppercase tracking-wider font-medium text-[#F9F1E7] hover:bg-[#316A7E] transition-all whitespace-nowrap"
           >
             <span>Request Custom Architecture</span>
             <span className="font-mono">↗</span>

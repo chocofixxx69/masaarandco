@@ -13,7 +13,7 @@ export const metadata = constructMetadata({
 
 export default function WorkPage() {
   return (
-    <div className="bg-[#FEEED7] min-h-screen pt-28 md:pt-36 pb-24">
+    <div className="bg-[#F9F1E7] min-h-screen pt-28 md:pt-36 pb-24">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-6 md:px-10 lg:px-16">
         <Reveal>
           <PageHeading

@@ -35,7 +35,7 @@ export default function Header() {
   }, []);
 
   const headerBgClass = isScrolled
-    ? "bg-[#F8EFE1]/95 backdrop-blur-md border-b border-[#092948]/10 shadow-sm"
+    ? "bg-[#F9F1E7]/95 backdrop-blur-md border-b border-[#092948]/10 shadow-sm"
     : "bg-transparent border-b border-transparent";
 
   return (
@@ -85,8 +85,8 @@ export default function Header() {
               aria-current={pathname === "/contact" ? "page" : undefined}
               className={`inline-flex items-center gap-2 rounded-full border px-5 py-2 text-[0.9375rem] font-medium transition-all duration-200 focus-ring-light ${
                 pathname === "/contact"
-                  ? "border-[#092948] bg-[#092948] text-[#F8EFE1]"
-                  : "border-[#092948]/50 text-[#092948] hover:bg-[#092948] hover:text-[#F8EFE1]"
+                  ? "border-[#092948] bg-[#092948] text-[#F9F1E7]"
+                  : "border-[#092948]/50 text-[#092948] hover:bg-[#092948] hover:text-[#F9F1E7]"
               }`}
             >
               <span>Let&apos;s Talk</span>
@@ -103,7 +103,7 @@ export default function Header() {
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-menu-overlay"
               aria-label="Open mobile navigation menu"
-              className="px-4 py-2 text-[0.9375rem] font-medium tracking-wide text-[#092948] border border-[#092948]/30 rounded-full hover:bg-[#092948] hover:text-[#FEEED7] transition-all focus-ring-light cursor-pointer"
+              className="px-4 py-2 text-[0.9375rem] font-medium tracking-wide text-[#092948] border border-[#092948]/30 rounded-full hover:bg-[#092948] hover:text-[#F9F1E7] transition-all focus-ring-light cursor-pointer"
             >
               Menu
             </button>

@@ -16,7 +16,7 @@ export const metadata = constructMetadata({
 
 export default function ServicesPage() {
   return (
-    <div className="bg-[#FEEED7] min-h-screen pt-28 md:pt-36 pb-24">
+    <div className="bg-[#F9F1E7] min-h-screen pt-28 md:pt-36 pb-24">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-6 md:px-10 lg:px-16">
         {/* Page Heading */}
         <Reveal>
@@ -33,22 +33,22 @@ export default function ServicesPage() {
 
         {/* OUR CORE FOCUS Section */}
         <section
-          className="mb-20 p-8 sm:p-10 md:p-14 bg-[#092948] text-[#FEEED7] rounded-[2px]"
+          className="mb-20 p-8 sm:p-10 md:p-14 bg-[#092948] text-[#F9F1E7] rounded-[2px]"
           aria-labelledby="core-focus-heading"
         >
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-6 border-b border-[rgba(254,238,215,0.15)]">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-6 border-b border-[rgba(249,241,231,0.15)]">
             <div>
               <p className="font-caps-label text-[#619AAA] text-xs tracking-[0.2em] mb-2">
                 Strategic Foundation
               </p>
               <h2
                 id="core-focus-heading"
-                className="font-serif text-3xl sm:text-4xl text-[#FEEED7] font-normal"
+                className="font-serif text-3xl sm:text-4xl text-[#F9F1E7] font-normal"
               >
                 Our Core Focus
               </h2>
             </div>
-            <p className="text-xs sm:text-sm text-[#FEEED7]/70 font-mono">
+            <p className="text-xs sm:text-sm text-[#F9F1E7]/70 font-mono">
               04 PILLARS OF CAPABILITY
             </p>
           </div>
@@ -57,21 +57,21 @@ export default function ServicesPage() {
             {CORE_FOCUS.map((focus) => (
               <div
                 key={focus.name}
-                className="p-6 bg-[#092948]/80 border border-[rgba(254,238,215,0.15)] rounded-[2px] space-y-4"
+                className="p-6 bg-[#092948]/80 border border-[rgba(249,241,231,0.15)] rounded-[2px] space-y-4"
               >
                 <div>
-                  <h3 className="font-serif text-2xl text-[#FEEED7] tracking-wide">
+                  <h3 className="font-serif text-2xl text-[#F9F1E7] tracking-wide">
                     {focus.name}
                   </h3>
                   <p className="text-xs text-[#619AAA] mt-1 font-medium">
                     {focus.tagline}
                   </p>
                 </div>
-                <ul className="space-y-2 pt-2 border-t border-[rgba(254,238,215,0.1)]">
+                <ul className="space-y-2 pt-2 border-t border-[rgba(249,241,231,0.1)]">
                   {focus.items.map((item, idx) => (
                     <li
                       key={idx}
-                      className="text-xs sm:text-sm text-[#FEEED7]/80 flex items-center gap-2"
+                      className="text-xs sm:text-sm text-[#F9F1E7]/80 flex items-center gap-2"
                     >
                       <span className="w-1.5 h-1.5 rounded-full bg-[#619AAA] flex-shrink-0" />
                       <span>{item}</span>
@@ -134,21 +134,21 @@ export default function ServicesPage() {
         </div>
 
         {/* Closing Consultation Callout */}
-        <div className="mt-20 p-10 md:p-14 bg-[#092948] text-[#FEEED7] rounded-[2px] flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+        <div className="mt-20 p-10 md:p-14 bg-[#092948] text-[#F9F1E7] rounded-[2px] flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
           <div className="space-y-2 max-w-xl">
             <p className="font-caps-label text-[#619AAA] text-xs">
               Custom Engineering
             </p>
-            <h3 className="font-serif text-2xl md:text-4xl text-[#FEEED7] font-normal">
+            <h3 className="font-serif text-2xl md:text-4xl text-[#F9F1E7] font-normal">
               {SERVICES_HEADER.customCallout.heading}
             </h3>
-            <p className="text-base text-[#FEEED7]/85">
+            <p className="text-base text-[#F9F1E7]/85">
               {SERVICES_HEADER.customCallout.description}
             </p>
           </div>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-full border border-[rgba(254,238,215,0.4)] px-7 py-3 text-sm font-medium text-[#FEEED7] hover:bg-[#316A7E] hover:border-[#316A7E] hover:text-[#FFFFFF] transition-all whitespace-nowrap focus-ring-dark"
+            className="inline-flex items-center gap-2 rounded-full border border-[rgba(249,241,231,0.4)] px-7 py-3 text-sm font-medium text-[#F9F1E7] hover:bg-[#316A7E] hover:border-[#316A7E] hover:text-[#FFFFFF] transition-all whitespace-nowrap focus-ring-dark"
           >
             <span>{SERVICES_HEADER.customCallout.cta}</span>
             <span className="font-mono">↗</span>

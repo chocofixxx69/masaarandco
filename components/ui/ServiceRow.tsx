@@ -40,7 +40,7 @@ export default function ServiceRow({
               <span className="text-xs font-mono tracking-widest text-[#316A7E] font-medium">
                 {service.number}
               </span>
-              <span className="w-7 h-7 rounded-full border border-[#092948]/30 flex items-center justify-center text-[#092948] transition-all duration-200 group-hover:border-[#092948] group-hover:bg-[#092948] group-hover:text-[#FEEED7]">
+              <span className="w-7 h-7 rounded-full border border-[#092948]/30 flex items-center justify-center text-[#092948] transition-all duration-200 group-hover:border-[#092948] group-hover:bg-[#092948] group-hover:text-[#F9F1E7]">
                 <ArrowUpRight className="w-3.5 h-3.5 stroke-[2]" />
               </span>
             </div>
@@ -144,7 +144,7 @@ export default function ServiceRow({
           <div className="pt-4">
             <Link
               href={`/contact?service=${encodeURIComponent(service.name)}`}
-              className="inline-flex items-center gap-2 rounded-full border border-[#092948] px-6 py-2.5 text-sm font-medium text-[#092948] hover:bg-[#092948] hover:text-[#FEEED7] transition-all duration-200 focus-ring-light"
+              className="inline-flex items-center gap-2 rounded-full border border-[#092948] px-6 py-2.5 text-sm font-medium text-[#092948] hover:bg-[#092948] hover:text-[#F9F1E7] transition-all duration-200 focus-ring-light"
             >
               <span>{service.cta}</span>
               <span className="font-mono">↗</span>

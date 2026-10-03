@@ -42,7 +42,7 @@ export default function WorkGallery() {
                 onClick={() => setSelectedCategory(cat)}
                 className={`rounded-full px-4 py-2 text-xs uppercase tracking-wider font-medium transition-all duration-200 cursor-pointer ${
                   isActive
-                    ? "bg-[#092948] text-[#FEEED7] shadow-sm"
+                    ? "bg-[#092948] text-[#F9F1E7] shadow-sm"
                     : "bg-[#FFFFFF]/60 text-[#092948]/70 hover:text-[#092948] hover:bg-[#FFFFFF] border border-[#092948]/10"
                 }`}
               >
@@ -59,7 +59,7 @@ export default function WorkGallery() {
             onClick={() => setGridCols(2)}
             title="2 Columns View"
             className={`p-1.5 rounded-full transition-colors ${
-              gridCols === 2 ? "bg-[#092948] text-[#FEEED7]" : "text-[#092948]/60 hover:text-[#092948]"
+              gridCols === 2 ? "bg-[#092948] text-[#F9F1E7]" : "text-[#092948]/60 hover:text-[#092948]"
             }`}
           >
             <Columns className="w-3.5 h-3.5" />
@@ -69,7 +69,7 @@ export default function WorkGallery() {
             onClick={() => setGridCols(3)}
             title="3 Columns View"
             className={`p-1.5 rounded-full transition-colors ${
-              gridCols === 3 ? "bg-[#092948] text-[#FEEED7]" : "text-[#092948]/60 hover:text-[#092948]"
+              gridCols === 3 ? "bg-[#092948] text-[#F9F1E7]" : "text-[#092948]/60 hover:text-[#092948]"
             }`}
           >
             <LayoutGrid className="w-3.5 h-3.5" />
@@ -132,7 +132,7 @@ export default function WorkGallery() {
                     <h3 className="font-serif text-2xl sm:text-3xl text-[#092948] font-normal group-hover:underline decoration-[#316A7E] underline-offset-4 leading-snug">
                       {project.title}
                     </h3>
-                    <span className="w-7 h-7 flex-shrink-0 rounded-full border border-[#092948]/30 flex items-center justify-center text-[#092948] group-hover:bg-[#092948] group-hover:text-[#FEEED7] group-hover:border-[#092948] transition-all duration-200 mt-1">
+                    <span className="w-7 h-7 flex-shrink-0 rounded-full border border-[#092948]/30 flex items-center justify-center text-[#092948] group-hover:bg-[#092948] group-hover:text-[#F9F1E7] group-hover:border-[#092948] transition-all duration-200 mt-1">
                       <ArrowUpRight className="w-3.5 h-3.5 stroke-[2]" />
                     </span>
                   </div>
@@ -158,7 +158,7 @@ export default function WorkGallery() {
           onClick={() => setActiveProject(null)}
         >
           <div
-            className="bg-[#FEEED7] text-[#092948] w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-[2px] border border-[#092948]/20 shadow-2xl p-6 sm:p-8 md:p-10 space-y-6"
+            className="bg-[#F9F1E7] text-[#092948] w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-[2px] border border-[#092948]/20 shadow-2xl p-6 sm:p-8 md:p-10 space-y-6"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Top Close Button & Meta */}
@@ -180,7 +180,7 @@ export default function WorkGallery() {
                 type="button"
                 onClick={() => setActiveProject(null)}
                 aria-label="Close modal"
-                className="p-2 rounded-full border border-[#092948]/20 hover:bg-[#092948] hover:text-[#FEEED7] transition-colors cursor-pointer"
+                className="p-2 rounded-full border border-[#092948]/20 hover:bg-[#092948] hover:text-[#F9F1E7] transition-colors cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -259,7 +259,7 @@ export default function WorkGallery() {
             <div className="pt-6 border-t border-[#092948]/15 flex items-center justify-between">
               <Link
                 href={`/contact?service=${encodeURIComponent(activeProject.category)}`}
-                className="inline-flex items-center gap-2 rounded-full bg-[#092948] px-6 py-2.5 text-xs uppercase tracking-wider font-medium text-[#FEEED7] hover:bg-[#316A7E] transition-all"
+                className="inline-flex items-center gap-2 rounded-full bg-[#092948] px-6 py-2.5 text-xs uppercase tracking-wider font-medium text-[#F9F1E7] hover:bg-[#316A7E] transition-all"
               >
                 <span>Discuss Similar Implementation</span>
                 <span className="font-mono">↗</span>

@@ -94,7 +94,7 @@ export default function RootLayout({
       lang="en"
       className={`${newsreader.variable} ${outfit.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#FEEED7] text-[#000000] selection:bg-[#316A7E] selection:text-[#FFFFFF]">
+      <body className="min-h-full flex flex-col bg-[#F9F1E7] text-[#000000] selection:bg-[#316A7E] selection:text-[#FFFFFF]">
         <SkipLink />
         <Header />
         <main id="main-content" className="flex-1">

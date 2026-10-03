@@ -8,7 +8,7 @@ export default function FeaturedWork() {
 
   return (
     <section
-      className="py-16 md:py-24 bg-[#FEEED7]"
+      className="py-16 md:py-24 bg-[#F9F1E7]"
       aria-labelledby="featured-work-heading"
     >
       <div className="max-w-[1440px] mx-auto px-5 sm:px-6 md:px-10 lg:px-16">
@@ -28,7 +28,7 @@ export default function FeaturedWork() {
 
           <Link
             href="/work"
-            className="inline-flex items-center gap-2 rounded-full border border-[#092948] px-5 py-2 text-xs uppercase tracking-wider font-medium text-[#092948] hover:bg-[#092948] hover:text-[#FEEED7] transition-all whitespace-nowrap"
+            className="inline-flex items-center gap-2 rounded-full border border-[#092948] px-5 py-2 text-xs uppercase tracking-wider font-medium text-[#092948] hover:bg-[#092948] hover:text-[#F9F1E7] transition-all whitespace-nowrap"
           >
             <span>View All Projects</span>
             <span className="font-mono">↗</span>

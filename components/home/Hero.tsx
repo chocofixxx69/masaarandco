@@ -14,7 +14,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative w-full min-h-[100svh] bg-[#F8EFE1] text-[#092948] overflow-hidden flex flex-col justify-between"
+      className="relative w-full min-h-[100svh] bg-[#F9F1E7] text-[#092948] overflow-hidden flex flex-col justify-between"
       aria-label="Hero Section"
     >
       {/* Visual Scene on the Right (Desktop >= 1024px) */}

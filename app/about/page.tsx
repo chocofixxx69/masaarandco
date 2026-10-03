@@ -28,7 +28,7 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="bg-[#FEEED7] min-h-screen pt-28 md:pt-36 pb-24">
+    <div className="bg-[#F9F1E7] min-h-screen pt-28 md:pt-36 pb-24">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-6 md:px-10 lg:px-16">
         {/* Page Header */}
         <Reveal>
@@ -70,7 +70,7 @@ export default function AboutPage() {
             <div className="pt-2">
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-full border border-[#092948] px-6 py-2.5 text-sm font-medium text-[#092948] hover:bg-[#092948] hover:text-[#FEEED7] transition-all focus-ring-light"
+                className="inline-flex items-center gap-2 rounded-full border border-[#092948] px-6 py-2.5 text-sm font-medium text-[#092948] hover:bg-[#092948] hover:text-[#F9F1E7] transition-all focus-ring-light"
               >
                 <span>Initiate an Engagement</span>
                 <span className="font-mono">↗</span>
@@ -98,7 +98,7 @@ export default function AboutPage() {
 
         {/* The Meaning of Masaar (مسار) Section */}
         <section
-          className="p-8 sm:p-12 md:p-16 bg-[#092948] text-[#FEEED7] rounded-[2px] my-16 relative overflow-hidden"
+          className="p-8 sm:p-12 md:p-16 bg-[#092948] text-[#F9F1E7] rounded-[2px] my-16 relative overflow-hidden"
           aria-labelledby="meaning-heading"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
@@ -112,18 +112,18 @@ export default function AboutPage() {
 
               <h2
                 id="meaning-heading"
-                className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#FEEED7] font-normal leading-tight"
+                className="font-serif text-3xl sm:text-4xl md:text-5xl text-[#F9F1E7] font-normal leading-tight"
               >
                 The Meaning of Masaar{" "}
                 <span className="text-[#619AAA] font-serif">(مسار)</span>
               </h2>
 
-              <p className="text-lg sm:text-xl text-[#FEEED7]/90 leading-relaxed font-normal max-w-2xl">
+              <p className="text-lg sm:text-xl text-[#F9F1E7]/90 leading-relaxed font-normal max-w-2xl">
                 The name <strong>Masaar (مسار)</strong> means path, course, or direction in Arabic. It reflects the journey behind everything we build — from an initial idea to something tangible, useful, and ready for the real world.
               </p>
 
-              <div className="pt-2 border-t border-[rgba(254,238,215,0.2)] max-w-xl">
-                <p className="font-serif text-2xl sm:text-3xl text-[#FEEED7] italic">
+              <div className="pt-2 border-t border-[rgba(249,241,231,0.2)] max-w-xl">
+                <p className="font-serif text-2xl sm:text-3xl text-[#F9F1E7] italic">
                   &ldquo;We don’t just imagine what could exist. We engineer it into existence.&rdquo;
                 </p>
                 <p className="text-xs uppercase tracking-[0.2em] text-[#619AAA] font-medium mt-3">
@@ -132,15 +132,15 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="lg:col-span-4 flex flex-col justify-center items-center text-center p-8 border border-[rgba(254,238,215,0.15)] bg-[#092948]/60 rounded-[2px]">
-              <span className="font-serif text-6xl sm:text-7xl text-[#FEEED7] mb-2 font-normal">
+            <div className="lg:col-span-4 flex flex-col justify-center items-center text-center p-8 border border-[rgba(249,241,231,0.15)] bg-[#092948]/60 rounded-[2px]">
+              <span className="font-serif text-6xl sm:text-7xl text-[#F9F1E7] mb-2 font-normal">
                 مسار
               </span>
               <p className="text-xs uppercase tracking-[0.25em] text-[#619AAA] font-mono mt-1">
                 PATH · COURSE · DIRECTION
               </p>
               <div className="w-12 h-[1px] bg-[#619AAA] my-4" />
-              <p className="text-xs text-[#FEEED7]/70 leading-relaxed">
+              <p className="text-xs text-[#F9F1E7]/70 leading-relaxed">
                 From initial idea to real-world execution.
               </p>
             </div>
@@ -209,7 +209,7 @@ export default function AboutPage() {
 
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-full bg-[#092948] px-7 py-3 text-xs uppercase tracking-wider font-medium text-[#FEEED7] hover:bg-[#316A7E] transition-all whitespace-nowrap"
+            className="inline-flex items-center gap-2 rounded-full bg-[#092948] px-7 py-3 text-xs uppercase tracking-wider font-medium text-[#F9F1E7] hover:bg-[#316A7E] transition-all whitespace-nowrap"
           >
             <span>Let&apos;s Build Together</span>
             <span className="font-mono">↗</span>

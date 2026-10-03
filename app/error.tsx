@@ -17,7 +17,7 @@ export default function ErrorPage({
   }, [error]);
 
   return (
-    <div className="bg-[#092948] text-[#FEEED7] min-h-[80vh] flex items-center justify-center py-24 px-6">
+    <div className="bg-[#092948] text-[#F9F1E7] min-h-[80vh] flex items-center justify-center py-24 px-6">
       <div className="max-w-xl text-center space-y-6">
         <div className="w-12 h-12 rounded-full bg-[#B3261E]/20 text-[#B3261E] border border-[#B3261E]/40 flex items-center justify-center mx-auto">
           <AlertCircle className="w-6 h-6 stroke-[2]" />
@@ -31,7 +31,7 @@ export default function ErrorPage({
           System Interruption
         </h1>
 
-        <p className="text-base text-[#FEEED7]/80 leading-relaxed max-w-md mx-auto">
+        <p className="text-base text-[#F9F1E7]/80 leading-relaxed max-w-md mx-auto">
           An unexpected error interrupted this pathway. Our engineering monitors have logged the event.
         </p>
 
@@ -47,7 +47,7 @@ export default function ErrorPage({
 
           <Link
             href="/"
-            className="inline-flex items-center gap-2 rounded-full border border-[rgba(254,238,215,0.4)] px-6 py-3 text-sm font-medium text-[#FEEED7] hover:bg-[#316A7E] hover:border-[#316A7E] hover:text-[#FFFFFF] transition-all focus-ring-dark"
+            className="inline-flex items-center gap-2 rounded-full border border-[rgba(249,241,231,0.4)] px-6 py-3 text-sm font-medium text-[#F9F1E7] hover:bg-[#316A7E] hover:border-[#316A7E] hover:text-[#FFFFFF] transition-all focus-ring-dark"
           >
             <span>Return Home</span>
           </Link>

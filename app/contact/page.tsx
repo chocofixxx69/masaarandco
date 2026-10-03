@@ -15,7 +15,7 @@ export const metadata = constructMetadata({
 
 export default function ContactPage() {
   return (
-    <div className="bg-[#FEEED7] min-h-screen pt-28 md:pt-36 pb-24">
+    <div className="bg-[#F9F1E7] min-h-screen pt-28 md:pt-36 pb-24">
       <div className="max-w-[1440px] mx-auto px-5 sm:px-6 md:px-10 lg:px-16">
         <Reveal>
           <PageHeading
@@ -45,7 +45,7 @@ export default function ContactPage() {
                   href={`mailto:${COMPANY.contact.email}`}
                   className="flex items-center gap-4 p-4 bg-[#FFFFFF]/70 border border-[#092948]/12 rounded-[2px] text-[#092948] hover:border-[#316A7E] hover:text-[#316A7E] transition-all group"
                 >
-                  <span className="w-10 h-10 rounded-full border border-[#092948]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#092948] group-hover:text-[#FEEED7] transition-all">
+                  <span className="w-10 h-10 rounded-full border border-[#092948]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#092948] group-hover:text-[#F9F1E7] transition-all">
                     <Mail className="w-4 h-4" />
                   </span>
                   <div>

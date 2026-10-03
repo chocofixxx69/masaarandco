@@ -73,17 +73,17 @@ export default function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuP
       role="dialog"
       aria-modal="true"
       aria-label="Navigation Menu"
-      className="fixed inset-0 z-50 bg-[#092948] text-[#FEEED7] flex flex-col justify-between p-6 sm:p-8 animate-in fade-in duration-300 overflow-y-auto"
+      className="fixed inset-0 z-50 bg-[#092948] text-[#F9F1E7] flex flex-col justify-between p-6 sm:p-8 animate-in fade-in duration-300 overflow-y-auto"
     >
       {/* Top Bar */}
-      <div className="flex items-center justify-between border-b border-[rgba(254,238,215,0.15)] pb-6">
+      <div className="flex items-center justify-between border-b border-[rgba(249,241,231,0.15)] pb-6">
         <MasaarLogo variant="cream" width={140} height={50} onClick={onClose} />
         <button
           ref={closeButtonRef}
           type="button"
           onClick={onClose}
           aria-label="Close navigation menu"
-          className="p-2.5 rounded-full border border-[rgba(254,238,215,0.3)] hover:bg-[#316A7E] transition-colors focus-ring-dark"
+          className="p-2.5 rounded-full border border-[rgba(249,241,231,0.3)] hover:bg-[#316A7E] transition-colors focus-ring-dark"
         >
           <X className="w-5 h-5" />
         </button>
@@ -105,7 +105,7 @@ export default function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuP
                   <span className="text-xs font-sans font-medium text-[#619AAA] tracking-widest">
                     0{index + 1}
                   </span>
-                  <span className={isActive ? "text-[#FFFFFF] underline decoration-[#619AAA] underline-offset-8" : "text-[#FEEED7]/90 hover:text-[#FFFFFF]"}>
+                  <span className={isActive ? "text-[#FFFFFF] underline decoration-[#619AAA] underline-offset-8" : "text-[#F9F1E7]/90 hover:text-[#FFFFFF]"}>
                     {item.label}
                   </span>
                 </div>
@@ -117,17 +117,17 @@ export default function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuP
       </nav>
 
       {/* Bottom Info / Contact Pill */}
-      <div className="pt-6 border-t border-[rgba(254,238,215,0.15)] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div className="pt-6 border-t border-[rgba(249,241,231,0.15)] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <p className="text-xs uppercase tracking-[0.2em] text-[#619AAA] font-medium">Inquiries</p>
           <a
             href={`mailto:${COMPANY.contact.email}`}
-            className="text-sm text-[#FEEED7] hover:underline"
+            className="text-sm text-[#F9F1E7] hover:underline"
           >
             {COMPANY.contact.email}
           </a>
         </div>
-        <div className="text-xs text-[#FEEED7]/60">
+        <div className="text-xs text-[#F9F1E7]/60">
           Riyadh · Dubai · London
         </div>
       </div>

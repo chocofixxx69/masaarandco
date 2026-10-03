@@ -37,13 +37,13 @@ export default function Button({
   let variantStyles = "";
   if (variant === "pill-outline") {
     variantStyles =
-      "rounded-full border border-[rgba(254,238,215,0.4)] text-[#FEEED7] bg-transparent hover:bg-[#316A7E] hover:border-[#316A7E] hover:text-[#FFFFFF] active:scale-[0.98] text-[0.9375rem] px-5 py-2.5 focus-ring-dark";
+      "rounded-full border border-[rgba(249,241,231,0.4)] text-[#F9F1E7] bg-transparent hover:bg-[#316A7E] hover:border-[#316A7E] hover:text-[#FFFFFF] active:scale-[0.98] text-[0.9375rem] px-5 py-2.5 focus-ring-dark";
   } else if (variant === "pill-dark") {
     variantStyles =
-      "rounded-full border border-[#092948] text-[#092948] bg-transparent hover:bg-[#092948] hover:text-[#FEEED7] active:scale-[0.98] text-[0.9375rem] px-5 py-2.5 focus-ring-light";
+      "rounded-full border border-[#092948] text-[#092948] bg-transparent hover:bg-[#092948] hover:text-[#F9F1E7] active:scale-[0.98] text-[0.9375rem] px-5 py-2.5 focus-ring-light";
   } else if (variant === "pill-light") {
     variantStyles =
-      "rounded-full border border-transparent bg-[#FEEED7] text-[#092948] hover:bg-[#FFFFFF] active:scale-[0.98] text-[0.9375rem] px-5 py-2.5 font-semibold focus-ring-dark";
+      "rounded-full border border-transparent bg-[#F9F1E7] text-[#092948] hover:bg-[#FFFFFF] active:scale-[0.98] text-[0.9375rem] px-5 py-2.5 font-semibold focus-ring-dark";
   } else if (variant === "ghost") {
     variantStyles =
       "text-sm tracking-wide text-inherit hover:text-[#619AAA] focus-ring-dark py-1";
