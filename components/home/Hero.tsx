@@ -134,14 +134,6 @@ export default function Hero() {
                   priority
                   className="w-full max-w-[340px] sm:max-w-[440px] md:max-w-[500px] h-auto object-contain select-none"
                 />
-
-                {/* Animated Horizontal Baseline / Pathway Line Device */}
-                <div
-                  className={`h-[1.5px] w-full bg-[#092948] origin-left transition-transform duration-[900ms] delay-100 ease-[cubic-bezier(0.22,1,0.36,1)] mt-2 ${
-                    mounted ? "scale-x-100" : "scale-x-0"
-                  }`}
-                  aria-hidden="true"
-                />
               </div>
 
               {/* Brand Tagline Micro-label */}
