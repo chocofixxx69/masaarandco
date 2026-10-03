@@ -67,9 +67,9 @@ export default function Hero() {
           <line x1="0" y1="720" x2="700" y2="720" stroke="#092948" strokeWidth="1" opacity="0.15" />
         </svg>
 
-        {/* The Leader Cutout Image (Transparent Cutout, anchored naturally to bottom) */}
+        {/* The Leader Cutout Image (Transparent Cutout, anchored to the right edge per screenshot 2) */}
         <div
-          className={`absolute right-4 xl:right-16 bottom-0 w-[420px] xl:w-[480px] h-[85svh] max-h-[760px] flex items-end justify-center transition-all duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
+          className={`absolute right-0 bottom-0 w-[380px] lg:w-[440px] xl:w-[520px] h-[86svh] max-h-[780px] flex items-end justify-end transition-all duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${
             mounted ? "scale-100 opacity-100 translate-y-0" : "scale-[0.98] opacity-0 translate-y-4"
           }`}
         >
@@ -80,8 +80,8 @@ export default function Hero() {
               fill
               priority
               quality={95}
-              sizes="(max-width: 1280px) 420px, 480px"
-              className="object-contain object-bottom select-none drop-shadow-[0_20px_40px_rgba(9,41,72,0.12)]"
+              sizes="(max-width: 1280px) 440px, 520px"
+              className="object-contain object-right-bottom select-none drop-shadow-[0_20px_40px_rgba(9,41,72,0.12)]"
             />
           </div>
         </div>
