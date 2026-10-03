@@ -54,34 +54,43 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/services#ai-solutions"
+                  href="/services#business-automation"
                   className="text-sm text-[#FEEED7]/80 hover:text-[#FFFFFF] transition-colors"
                 >
-                  AI Solutions &amp; Automation
+                  Business Automation
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services#product-development"
+                  href="/services#ai-chatbots-voice-agents"
                   className="text-sm text-[#FEEED7]/80 hover:text-[#FFFFFF] transition-colors"
                 >
-                  Product Development
+                  AI, Chatbots &amp; Voice Agents
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/services#digital-transformation"
+                  href="/services#application-development"
                   className="text-sm text-[#FEEED7]/80 hover:text-[#FFFFFF] transition-colors"
                 >
-                  Digital Transformation
+                  Application &amp; Web Development
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/work"
+                  href="/services#system-integration"
                   className="text-sm text-[#FEEED7]/80 hover:text-[#FFFFFF] transition-colors"
                 >
-                  Selected Work &amp; Case Studies
+                  System Integration
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/services"
+                  className="text-sm text-[#619AAA] hover:underline transition-colors font-medium flex items-center gap-1"
+                >
+                  <span>View All 12 Services</span>
+                  <span>↗</span>
                 </Link>
               </li>
             </ul>

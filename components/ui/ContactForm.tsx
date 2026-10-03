@@ -264,11 +264,19 @@ export default function ContactForm({ initialService = "" }: ContactFormProps) {
             onChange={handleChange}
             className="w-full px-4 py-3 text-base text-[#000000] bg-[#FEEED7]/20 border border-[#092948]/20 rounded-[2px] focus:outline-none focus:border-[#092948] focus:bg-[#FFFFFF] transition-colors"
           >
-            <option value="AI Solutions">AI Solutions &amp; Intelligent Workflows</option>
-            <option value="Product Development">Web &amp; Mobile Product Development</option>
-            <option value="Digital Transformation">Digital Transformation &amp; Modernization</option>
-            <option value="Strategic Advisory">Strategic Enterprise Technology Advisory</option>
-            <option value="General Inquiry">General Partnership Inquiry</option>
+            <option value="Business Automation">01 — Business Automation</option>
+            <option value="AI, Chatbots & Voice Agents">02 — AI, Chatbots &amp; Voice Agents</option>
+            <option value="Website Development">03 — Website Development</option>
+            <option value="Application Development">04 — Application Development</option>
+            <option value="System Integration">05 — System Integration</option>
+            <option value="AI & Intelligent Solutions">06 — AI &amp; Intelligent Solutions</option>
+            <option value="Data & Business Intelligence">07 — Data &amp; Business Intelligence</option>
+            <option value="Cloud & IT Solutions">08 — Cloud &amp; IT Solutions</option>
+            <option value="Digital Products & SaaS">09 — Digital Products &amp; SaaS</option>
+            <option value="Digital Marketing & Content Systems">10 — Digital Marketing &amp; Content Systems</option>
+            <option value="Emerging Technology">11 — Emerging Technology</option>
+            <option value="Technology Consulting">12 — Technology Consulting</option>
+            <option value="Custom Technology Requirement">Custom Technology Requirement</option>
           </select>
         </div>
       </div>
