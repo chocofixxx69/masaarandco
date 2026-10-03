@@ -14,7 +14,7 @@ export default function Header() {
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const sentinelRef = useRef<HTMLDivElement>(null);
 
-  // PRD §4: Transparent over hero, switches to Primary at 80px scroll via IntersectionObserver (no scroll listener)
+  // IntersectionObserver for scroll detection (PRD §4)
   useEffect(() => {
     const sentinel = document.getElementById("header-sentinel");
     if (!sentinel) return;
@@ -34,14 +34,9 @@ export default function Header() {
     return () => observer.disconnect();
   }, []);
 
-  // Is this a page with a dark hero or light header?
-  // Home is dark hero; other pages can have dark hero or light background, but header in Primary looks cohesive everywhere!
-  const isHome = pathname === "/";
   const headerBgClass = isScrolled
-    ? "bg-[#092948]/95 backdrop-blur-md border-b border-[rgba(254,238,215,0.12)] shadow-sm"
-    : isHome
-    ? "bg-transparent border-b border-transparent"
-    : "bg-[#092948] border-b border-[rgba(254,238,215,0.1)]";
+    ? "bg-[#EAE8E1]/95 backdrop-blur-md border-b border-[#092948]/12 shadow-sm"
+    : "bg-transparent border-b border-transparent";
 
   return (
     <>
@@ -52,9 +47,9 @@ export default function Header() {
         role="banner"
       >
         <div className="max-w-[1440px] mx-auto px-5 sm:px-6 md:px-10 lg:px-16 h-20 md:h-24 flex items-center justify-between">
-          {/* Logo Left */}
+          {/* Logo Left in Dark Navy on Transparent */}
           <div className="flex-shrink-0">
-            <MasaarLogo variant="cream" width={160} height={56} priority />
+            <MasaarLogo variant="navy" width={160} height={56} priority />
           </div>
 
           {/* Desktop Navigation ≥1024px */}
@@ -69,14 +64,14 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   aria-current={isActive ? "page" : undefined}
-                  className={`relative text-[0.9375rem] font-medium tracking-[0.02em] transition-colors duration-200 py-1 focus-ring-dark ${
-                    isActive ? "text-[#FEEED7]" : "text-[#FEEED7]/80 hover:text-[#FEEED7]"
+                  className={`relative text-[0.9375rem] font-medium tracking-[0.02em] transition-colors duration-200 py-1 focus-ring-light ${
+                    isActive ? "text-[#092948]" : "text-[#092948]/75 hover:text-[#092948]"
                   }`}
                 >
                   {item.label}
                   {isActive && (
                     <span
-                      className="absolute bottom-0 left-0 right-0 h-[1px] bg-[#619AAA] transition-all"
+                      className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-[#316A7E] transition-all"
                       aria-hidden="true"
                     />
                   )}
@@ -84,14 +79,14 @@ export default function Header() {
               );
             })}
 
-            {/* Contact as single outlined pill per PRD §4 */}
+            {/* Contact as single outlined pill with dark border & arrow */}
             <Link
               href="/contact"
               aria-current={pathname === "/contact" ? "page" : undefined}
-              className={`inline-flex items-center gap-2 rounded-full border px-5 py-2 text-[0.9375rem] font-medium transition-all duration-200 focus-ring-dark ${
+              className={`inline-flex items-center gap-2 rounded-full border px-5 py-2 text-[0.9375rem] font-medium transition-all duration-200 focus-ring-light ${
                 pathname === "/contact"
-                  ? "border-[#619AAA] bg-[#316A7E] text-[#FFFFFF]"
-                  : "border-[rgba(254,238,215,0.4)] text-[#FEEED7] hover:bg-[#316A7E] hover:border-[#316A7E] hover:text-[#FFFFFF]"
+                  ? "border-[#092948] bg-[#092948] text-[#FEEED7]"
+                  : "border-[#092948]/50 text-[#092948] hover:bg-[#092948] hover:text-[#FEEED7]"
               }`}
             >
               <span>Let&apos;s Talk</span>
@@ -108,7 +103,7 @@ export default function Header() {
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-menu-overlay"
               aria-label="Open mobile navigation menu"
-              className="px-4 py-2 text-[0.9375rem] font-medium tracking-wide text-[#FEEED7] border border-[rgba(254,238,215,0.3)] rounded-full hover:bg-[#316A7E] hover:text-white transition-all focus-ring-dark"
+              className="px-4 py-2 text-[0.9375rem] font-medium tracking-wide text-[#092948] border border-[#092948]/30 rounded-full hover:bg-[#092948] hover:text-[#FEEED7] transition-all focus-ring-light cursor-pointer"
             >
               Menu
             </button>
