@@ -1,6 +1,5 @@
 import React from "react";
 import Hero from "@/components/home/Hero";
-import AudienceRow from "@/components/home/AudienceRow";
 import EditorialBlock from "@/components/ui/EditorialBlock";
 import StatsBand from "@/components/home/StatsBand";
 import ServicesPreview from "@/components/home/ServicesPreview";
@@ -24,10 +23,7 @@ export default function HomePage() {
       {/* A. Hero (P0) */}
       <Hero />
 
-      {/* B. Audience / Sectors Row (Ref. 3) */}
-      <AudienceRow />
-
-      {/* C. Introduction (P0) */}
+      {/* B. Introduction (P0) */}
       <Reveal>
         <EditorialBlock
           heading="From Ideas to Impact"
