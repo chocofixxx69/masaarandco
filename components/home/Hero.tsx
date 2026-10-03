@@ -178,18 +178,6 @@ export default function Hero() {
               </Link>
             </div>
           </div>
-
-          {/* Right Column Corner Micro-Labels (Desktop cols 8-12) */}
-          <div className="hidden lg:flex lg:col-span-4 xl:col-span-5 flex-col justify-end items-end text-right pb-4">
-            <div className="p-5 border-l-2 border-[#316A7E] bg-[#FFFFFF]/60 backdrop-blur-md rounded-[2px] space-y-1.5 max-w-xs text-left shadow-sm">
-              <p className="text-[0.6875rem] uppercase tracking-[0.22em] text-[#316A7E] font-semibold">
-                Core Domains
-              </p>
-              <p className="text-xs text-[#092948] font-mono tracking-wider leading-relaxed">
-                AUTOMATE · BUILD · CONNECT · SCALE
-              </p>
-            </div>
-          </div>
         </div>
       </div>
 
