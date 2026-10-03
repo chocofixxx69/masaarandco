@@ -35,7 +35,7 @@ export default function Header() {
   }, []);
 
   const headerBgClass = isScrolled
-    ? "bg-[#EAE8E1]/95 backdrop-blur-md border-b border-[#092948]/12 shadow-sm"
+    ? "bg-[#FEEED7]/95 backdrop-blur-md border-b border-[#092948]/10 shadow-sm"
     : "bg-transparent border-b border-transparent";
 
   return (
