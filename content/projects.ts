@@ -10,7 +10,7 @@ export interface ProjectItem {
   image: string;
   imageAlt: string;
   featured: boolean;
-  aspect: "4:5" | "16:10" | "16:9";
+  aspect: "16:10" | "16:9" | "4:3";
   metrics: string[];
   stack: string[];
   link?: string;
@@ -107,7 +107,7 @@ export const PROJECTS: ProjectItem[] = [
     image: "/images/hero-architecture.jpg",
     imageAlt: "High-resolution architectural spatial rendering with environmental reflection",
     featured: false,
-    aspect: "16:9",
+    aspect: "16:10",
     metrics: [
       "12 Metropolitan municipal sectors mapped",
       "Real-time solar irradiance & shadow simulation",
@@ -143,5 +143,30 @@ export const PROJECTS: ProjectItem[] = [
       "Legacy batch processing meant corporate multi-currency settlements required 48 to 72 hours with high manual clearing intervention.",
     solution:
       "Masaar engineered an event-driven clearing core using Rust and Kafka with sub-second cryptographic validation, providing real-time multi-currency settlement.",
+  },
+  {
+    id: "apex-automate",
+    slug: "apex-automate",
+    title: "Apex Automate",
+    category: "Business Automation",
+    client: "Gulf Logistics & Operations",
+    year: "2025",
+    oneLiner: "Enterprise operations workflow orchestration and real-time approval pipelines.",
+    summary:
+      "An autonomous business automation engine processing over 250,000 multi-tier approval requests, document generation workflows, and cross-department handoffs with zero manual delay.",
+    image: "/images/service-ai-solutions.jpg",
+    imageAlt: "Architectural lines representing operational streamlined pathways",
+    featured: false,
+    aspect: "16:10",
+    metrics: [
+      "82% Reduction in manual processing time",
+      "250k+ Automated transactions monthly",
+      "Zero data sync discrepancies",
+    ],
+    stack: ["Next.js", "Python FastAPI", "Temporal.io", "PostgreSQL", "Tailwind CSS"],
+    challenge:
+      "Enterprise logistics requests required manual verification across six disparate software packages, causing up to 4 days of turnaround lag per invoice.",
+    solution:
+      "We built an autonomous workflow orchestrator with rule-based conditional escalations, unifying dispatch, billing, and customs compliance into instant automated pipelines.",
   },
 ];
