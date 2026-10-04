@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Hero from "@/components/home/Hero";
 import EditorialBlock from "@/components/ui/EditorialBlock";
@@ -9,8 +11,10 @@ import AboutBanner from "@/components/home/AboutBanner";
 import ContactBand from "@/components/home/ContactBand";
 import Reveal from "@/components/ui/Reveal";
 import { getOrganizationJsonLd } from "@/lib/metadata";
+import { useTranslation } from "@/lib/i18n/LanguageContext";
 
 export default function HomePage() {
+  const { t } = useTranslation();
   const jsonLd = getOrganizationJsonLd();
 
   return (
@@ -26,11 +30,11 @@ export default function HomePage() {
       {/* B. Introduction (P0) */}
       <Reveal>
         <EditorialBlock
-          heading="From Ideas to Impact"
-          italicWord="Impact"
-          paragraph="Masaar & Co. is a technology and solutions company focused on turning ideas into practical, real-world solutions. We combine engineering, technology, design, and innovation to build digital products, intelligent systems, software, automation, and infrastructure."
-          ctaText="Our Services"
-          ctaHref="/services"
+          heading={t.home.intro.heading}
+          italicWord={t.home.intro.italicWord}
+          paragraph={t.home.intro.paragraph}
+          ctaText={t.home.intro.ctaText}
+          ctaHref={t.home.intro.ctaHref}
         />
       </Reveal>
 

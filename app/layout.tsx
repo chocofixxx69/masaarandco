@@ -1,9 +1,10 @@
 import type { Metadata, Viewport } from "next";
-import { Newsreader, Outfit } from "next/font/google";
+import { Newsreader, Outfit, Amiri, IBM_Plex_Sans_Arabic } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SkipLink from "@/components/layout/SkipLink";
+import { LanguageProvider } from "@/lib/i18n/LanguageContext";
 
 const newsreader = Newsreader({
   subsets: ["latin"],
@@ -17,6 +18,21 @@ const outfit = Outfit({
   subsets: ["latin"],
   weight: ["400", "500", "600"],
   variable: "--font-outfit",
+  display: "swap",
+});
+
+const amiri = Amiri({
+  subsets: ["arabic", "latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-amiri",
+  display: "swap",
+});
+
+const ibmPlexArabic = IBM_Plex_Sans_Arabic({
+  subsets: ["arabic"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-ibm-plex-arabic",
   display: "swap",
 });
 
@@ -92,15 +108,26 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${newsreader.variable} ${outfit.variable} h-full scroll-smooth antialiased`}
+      dir="ltr"
+      suppressHydrationWarning
+      className={`${newsreader.variable} ${outfit.variable} ${amiri.variable} ${ibmPlexArabic.variable} h-full scroll-smooth antialiased`}
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var l=localStorage.getItem('masaar_locale')||(document.cookie.match(/masaar_locale=([^;]+)/)||[])[1];if(l==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl';document.documentElement.classList.add('rtl');}else{document.documentElement.lang='en';document.documentElement.dir='ltr';document.documentElement.classList.remove('rtl');}}catch(e){}})();`,
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col bg-[#F9F1E7] text-[#000000] selection:bg-[#316A7E] selection:text-[#FFFFFF]">
-        <SkipLink />
-        <Header />
-        <main id="main-content" className="flex-1">
-          {children}
-        </main>
-        <Footer />
+        <LanguageProvider>
+          <SkipLink />
+          <Header />
+          <main id="main-content" className="flex-1">
+            {children}
+          </main>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

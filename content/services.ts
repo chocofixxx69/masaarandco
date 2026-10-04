@@ -207,8 +207,8 @@ export const SERVICES: ServiceItem[] = [
     id: "ai-intelligent-solutions",
     slug: "ai-intelligent-solutions",
     number: "06",
-    name: "AI & Intelligent Solutions",
-    tagline: "Generative AI, document processing, data extraction, recommendation systems, computer vision, speech solutions, and AI-powered applications.",
+    name: "Intelligent Systems & Automation",
+    tagline: "Custom machine intelligence, document processing, data extraction, predictive decision systems, computer vision, and intelligent enterprise automation.",
     summary:
       "Transform unstructured assets into strategic business advantages. We deploy machine vision, intelligent OCR document extraction, predictive recommendation algorithms, and fine-tuned generative AI tuned to your operational data.",
     image: "/images/service-product-dev.jpg",

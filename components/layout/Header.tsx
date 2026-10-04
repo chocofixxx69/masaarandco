@@ -5,59 +5,49 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import MasaarLogo from "@/components/ui/MasaarLogo";
 import MobileMenu from "./MobileMenu";
-import { COMPANY } from "@/content/company";
+import LanguageToggle from "@/components/ui/LanguageToggle";
+import { useTranslation } from "@/lib/i18n/LanguageContext";
 
 export default function Header() {
   const pathname = usePathname();
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
-  const sentinelRef = useRef<HTMLDivElement>(null);
 
-  // IntersectionObserver for scroll detection (PRD §4)
+  // Fast, responsive scroll listener (15px threshold)
   useEffect(() => {
-    const sentinel = document.getElementById("header-sentinel");
-    if (!sentinel) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsScrolled(!entry.isIntersecting);
-      },
-      {
-        root: null,
-        threshold: 0,
-        rootMargin: "-80px 0px 0px 0px",
-      }
-    );
-
-    observer.observe(sentinel);
-    return () => observer.disconnect();
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 15);
+    };
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const headerBgClass = isScrolled
-    ? "bg-[#F9F1E7]/95 backdrop-blur-md border-b border-[#092948]/10 shadow-sm"
+  const isHomePage = pathname === "/";
+  const headerBgClass = (!isHomePage || isScrolled)
+    ? "bg-[#FFFFFF]/95 backdrop-blur-md border-b border-[#092948]/10 shadow-xs"
     : "bg-transparent border-b border-transparent";
 
   return (
     <>
-      <div id="header-sentinel" ref={sentinelRef} className="absolute top-0 left-0 w-full h-[80px] pointer-events-none" />
-
       <header
-        className={`fixed top-0 left-0 w-full z-40 transition-colors duration-300 ${headerBgClass}`}
+        className={`fixed top-0 inset-x-0 z-40 transition-colors duration-300 ${headerBgClass}`}
         role="banner"
       >
-        <div className="max-w-[1440px] mx-auto px-5 sm:px-6 md:px-10 lg:px-16 h-20 md:h-24 flex items-center justify-between">
-          {/* Logo Left in Dark Navy on Transparent */}
+        <div className="max-w-[1440px] mx-auto px-5 sm:px-6 md:px-10 lg:px-16 h-16 sm:h-20 md:h-24 flex items-center justify-between">
+          {/* Logo Left/Right in Dark Navy on Transparent */}
           <div className="flex-shrink-0">
-            <MasaarLogo variant="navy" width={160} height={56} priority />
+            <MasaarLogo variant="navy" width={140} height={48} priority className="max-w-[130px] sm:max-w-[160px]" />
           </div>
 
           {/* Desktop Navigation ≥1024px */}
           <nav
-            className="hidden lg:flex items-center space-x-8 xl:space-x-10"
+            className="hidden lg:flex items-center space-x-6 xl:space-x-8 rtl:space-x-reverse"
             aria-label="Main Navigation"
           >
-            {COMPANY.navLinks.slice(0, 4).map((item) => {
+            {t.nav.items.slice(0, 4).map((item) => {
               const isActive = pathname === item.href;
               return (
                 <Link
@@ -71,31 +61,36 @@ export default function Header() {
                   {item.label}
                   {isActive && (
                     <span
-                      className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-[#316A7E] transition-all"
-                      aria-hidden="true"
-                    />
+                    className="absolute bottom-0 inset-x-0 h-[1.5px] bg-[#316A7E] transition-all"
+                    aria-hidden="true"
+                  />
                   )}
                 </Link>
               );
             })}
 
-            {/* Contact as single outlined pill with dark border & arrow */}
+            {/* Language Toggle Desktop */}
+            <LanguageToggle variant="desktop" />
+
+            {/* Contact as single outlined pill with cream background & dark border & arrow */}
             <Link
               href="/contact"
               aria-current={pathname === "/contact" ? "page" : undefined}
               className={`inline-flex items-center gap-2 rounded-full border px-5 py-2 text-[0.9375rem] font-medium transition-all duration-200 focus-ring-light ${
                 pathname === "/contact"
-                  ? "border-[#092948] bg-[#092948] text-[#F9F1E7]"
-                  : "border-[#092948]/50 text-[#092948] hover:bg-[#092948] hover:text-[#F9F1E7]"
+                  ? "border-[#092948] bg-[#092948] text-[#FFFFFF]"
+                  : "border-[#092948]/30 bg-[#F9F1E7] text-[#092948] hover:bg-[#092948] hover:text-[#FFFFFF]"
               }`}
             >
-              <span>Let&apos;s Talk</span>
-              <span className="text-xs">→</span>
+              <span>{t.nav.letsTalk}</span>
+              <span className="text-xs transition-transform rtl:rotate-180">→</span>
             </Link>
           </nav>
 
-          {/* Tablet/Mobile <1024: "Menu" text button */}
-          <div className="lg:hidden flex items-center">
+          {/* Tablet/Mobile <1024: Language Toggle + Premium Architectural Menu Button */}
+          <div className="lg:hidden flex items-center gap-2">
+            <LanguageToggle variant="mobile-bar" />
+
             <button
               ref={menuButtonRef}
               type="button"
@@ -103,9 +98,16 @@ export default function Header() {
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-menu-overlay"
               aria-label="Open mobile navigation menu"
-              className="px-4 py-2 text-[0.9375rem] font-medium tracking-wide text-[#092948] border border-[#092948]/30 rounded-full hover:bg-[#092948] hover:text-[#F9F1E7] transition-all focus-ring-light cursor-pointer"
+              className="group relative flex items-center gap-2 px-3 py-1.5 min-h-[38px] sm:min-h-[42px] rounded-full bg-[#F9F1E7] border border-[#092948]/20 shadow-xs hover:border-[#316A7E] hover:bg-[#FFFFFF] transition-all duration-200 focus-ring-light cursor-pointer active:scale-95"
             >
-              Menu
+              {/* Animated 2-bar architectural icon */}
+              <span className="flex flex-col justify-center items-end gap-1 w-4 h-3.5" aria-hidden="true">
+                <span className="w-4 h-[1.75px] bg-[#092948] rounded-full group-hover:bg-[#316A7E] transition-colors" />
+                <span className="w-2.5 h-[1.75px] bg-[#316A7E] rounded-full group-hover:w-4 transition-all" />
+              </span>
+              <span className="font-caps-label text-[0.6875rem] tracking-[0.18em] font-semibold text-[#092948] group-hover:text-[#316A7E] transition-colors uppercase pt-0.5">
+                {t.nav.menu}
+              </span>
             </button>
           </div>
         </div>

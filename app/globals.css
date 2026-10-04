@@ -15,16 +15,50 @@
 
   --font-serif: var(--font-newsreader), "Instrument Serif", "Newsreader", Georgia, serif;
   --font-sans: var(--font-outfit), "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-arabic: var(--font-amiri), "Amiri", "Traditional Arabic", "Noto Naskh Arabic", serif;
+  --font-arabic-sans: var(--font-ibm-plex-arabic), "IBM Plex Sans Arabic", var(--font-outfit), -apple-system, BlinkMacSystemFont, "Segoe UI", Tahoma, sans-serif;
 }
 
 /* Base resets & typography */
 html {
   scroll-behavior: smooth;
   font-family: var(--font-sans);
-  background-color: #F9F1E7;
+  background-color: #FFFFFF;
   color: var(--precision);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+html[dir="rtl"],
+html.rtl {
+  font-family: var(--font-arabic-sans);
+}
+
+html[dir="rtl"] body,
+html.rtl body {
+  font-family: var(--font-arabic-sans);
+}
+
+html[dir="rtl"] .font-h1,
+html[dir="rtl"] .font-h2,
+html.rtl .font-h1,
+html.rtl .font-h2 {
+  letter-spacing: 0;
+  line-height: 1.28;
+}
+
+html[dir="rtl"] .font-caps-label,
+html.rtl .font-caps-label {
+  letter-spacing: 0.08em;
+  text-transform: none;
+}
+
+html[dir="rtl"] .pathway-rule,
+html[dir="rtl"] .pathway-rule-dark,
+html.rtl .pathway-rule,
+html.rtl .pathway-rule-dark {
+  transform-origin: right;
 }
 
 body {
@@ -32,7 +66,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background-color: #F9F1E7;
+  background-color: #FFFFFF;
   color: var(--precision);
 }
 
@@ -64,10 +98,10 @@ body {
 .font-h1 {
   font-family: var(--font-serif);
   font-weight: 400;
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  line-height: 1.02;
+  font-size: clamp(1.875rem, 5.5vw, 4.5rem);
+  line-height: 1.05;
   letter-spacing: -0.015em;
-  max-width: 14ch;
+  max-width: 24ch;
 }
 
 .font-h2 {
