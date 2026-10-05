@@ -33,24 +33,57 @@ html {
 html[dir="rtl"],
 html.rtl {
   font-family: var(--font-arabic-sans);
+  text-align: start;
 }
 
 html[dir="rtl"] body,
 html.rtl body {
   font-family: var(--font-arabic-sans);
+  line-height: 1.7;
+  text-align: start;
+}
+
+/* Arabic Headings: IBM Plex Sans Arabic with generous line heights and zero letter-spacing */
+html[dir="rtl"] .font-display-hero,
+html.rtl .font-display-hero {
+  font-family: var(--font-arabic-sans);
+  font-weight: 500;
+  line-height: 1.22 !important;
+  letter-spacing: 0 !important;
 }
 
 html[dir="rtl"] .font-h1,
 html[dir="rtl"] .font-h2,
 html.rtl .font-h1,
 html.rtl .font-h2 {
-  letter-spacing: 0;
-  line-height: 1.28;
+  font-family: var(--font-arabic-sans);
+  font-weight: 500;
+  line-height: 1.3 !important;
+  letter-spacing: 0 !important;
 }
 
+html[dir="rtl"] .font-serif,
+html.rtl .font-serif {
+  font-family: var(--font-arabic-sans);
+}
+
+/* Arabic Labels & Nav: Prevent letter-spacing from breaking cursive glyphs */
 html[dir="rtl"] .font-caps-label,
 html.rtl .font-caps-label {
-  letter-spacing: 0.08em;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  font-weight: 600;
+}
+
+html[dir="rtl"] .font-nav-btn,
+html.rtl .font-nav-btn {
+  letter-spacing: 0 !important;
+}
+
+/* Enforce connected cursive typography in Arabic: disable tracking & capitalization on Arabic elements */
+html[dir="rtl"] *:not([dir="ltr"]):not([dir="ltr"] *),
+html.rtl *:not([dir="ltr"]):not([dir="ltr"] *) {
+  letter-spacing: 0;
   text-transform: none;
 }
 

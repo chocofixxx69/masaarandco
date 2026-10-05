@@ -96,9 +96,9 @@ export default function ServicesPage() {
               <a
                 key={s.id}
                 href={`#${s.slug}`}
-                className="flex-shrink-0 px-3 py-1.5 rounded-full bg-[#FFFFFF] border border-[#092948]/15 text-[#092948] font-medium hover:bg-[#092948] hover:text-[#FFFFFF] transition-colors whitespace-nowrap min-h-[34px] inline-flex items-center"
+                className="flex-shrink-0 px-3.5 py-1.5 rounded-full bg-[#FFFFFF] border border-[#092948]/15 text-[#092948] font-medium hover:bg-[#092948] hover:text-[#FFFFFF] transition-colors whitespace-nowrap min-h-[34px] inline-flex items-center gap-2"
               >
-                <span className="font-mono text-[#316A7E] me-1.5" dir="ltr">{s.number}</span>
+                <span className="font-mono text-[#316A7E] font-semibold" dir="ltr">{s.number}</span>
                 <span>{s.name}</span>
               </a>
             ))}

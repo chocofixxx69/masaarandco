@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ArrowUpLeft } from "lucide-react";
 import { ProjectItem } from "@/content/projects";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 
@@ -18,7 +18,7 @@ export default function ProjectTile({
   aspect = "16:10",
   className = "",
 }: ProjectTileProps) {
-  const { t } = useTranslation();
+  const { t, isArabic } = useTranslation();
 
   const localized = t.workPage.projects.find(
     (p) => p.id === project.id || p.slug === project.slug
@@ -63,11 +63,18 @@ export default function ProjectTile({
         <div>
           {/* Title and arrow on the exact same row */}
           <div className="flex items-start justify-between gap-3">
-            <h3 className="font-serif text-lg sm:text-2xl text-[#092948] font-normal leading-snug group-hover:underline underline-offset-4 decoration-[#316A7E] transition-colors">
+            <h3
+              className="font-serif text-lg sm:text-2xl text-[#092948] font-normal leading-snug group-hover:underline underline-offset-4 decoration-[#316A7E] transition-colors text-start"
+              dir={isArabic ? "rtl" : "ltr"}
+            >
               {localized.title}
             </h3>
             <span className="w-7 h-7 flex-shrink-0 rounded-full border border-[#092948]/30 flex items-center justify-center text-[#092948] group-hover:bg-[#092948] group-hover:text-[#FFFFFF] group-hover:border-[#092948] transition-all duration-200 mt-0.5">
-              <ArrowUpRight className="w-3.5 h-3.5 stroke-[2] rtl:-scale-x-100" />
+              {isArabic ? (
+                <ArrowUpLeft className="w-3.5 h-3.5 stroke-[2]" />
+              ) : (
+                <ArrowUpRight className="w-3.5 h-3.5 stroke-[2]" />
+              )}
             </span>
           </div>
 

@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, ArrowUpLeft } from "lucide-react";
 import { ServiceItem } from "@/content/services";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 
@@ -60,7 +60,11 @@ export default function ServiceRow({
                 {service.number}
               </span>
               <span className="w-7 h-7 rounded-full border border-[#092948]/30 flex items-center justify-center text-[#092948] transition-all duration-200 group-hover:border-[#092948] group-hover:bg-[#092948] group-hover:text-[#FFFFFF]">
-                <ArrowUpRight className="w-3.5 h-3.5 stroke-[2] rtl:-scale-x-100" />
+                {isArabic ? (
+                  <ArrowUpLeft className="w-3.5 h-3.5 stroke-[2]" />
+                ) : (
+                  <ArrowUpRight className="w-3.5 h-3.5 stroke-[2]" />
+                )}
               </span>
             </div>
 
@@ -189,7 +193,11 @@ export default function ServiceRow({
               className="inline-flex items-center justify-center gap-2 rounded-full border border-[#092948] px-6 py-3 sm:py-2.5 text-sm font-medium text-[#092948] hover:bg-[#092948] hover:text-[#F9F1E7] transition-all duration-200 focus-ring-light min-h-[44px] w-full sm:w-auto"
             >
               <span>{localized.cta}</span>
-              <span className="font-mono rtl:-scale-x-100 inline-block">↗</span>
+              {isArabic ? (
+                <ArrowUpLeft className="w-3.5 h-3.5 stroke-[2] inline-block" />
+              ) : (
+                <ArrowUpRight className="w-3.5 h-3.5 stroke-[2] inline-block" />
+              )}
             </Link>
           </div>
         </div>

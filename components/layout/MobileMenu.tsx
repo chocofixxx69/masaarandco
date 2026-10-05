@@ -154,7 +154,7 @@ export default function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuP
                     <div className="flex items-baseline gap-3">
                       <span className={`font-mono text-xs font-semibold ${
                         isActive ? "text-[#316A7E]" : "text-[#092948]/40 group-hover:text-[#316A7E]"
-                      }`}>
+                      }`} dir="ltr">
                         {isArabic ? `٠${index + 1}` : `0${index + 1}`}
                       </span>
                       <div className="flex items-baseline gap-2">
@@ -191,22 +191,23 @@ export default function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuP
               <Link
                 href="/services"
                 onClick={onClose}
-                className="text-[0.6875rem] text-[#092948]/60 hover:text-[#092948] font-medium transition-colors"
+                className="inline-flex items-center gap-1 text-[0.6875rem] text-[#092948]/60 hover:text-[#092948] font-medium transition-colors"
               >
-                {isArabic ? "كافة الحلول (١٢) ←" : "All 12 →"}
+                <span>{isArabic ? "كافة الحلول (١٢)" : "All 12"}</span>
+                <ArrowRight className="w-3 h-3 text-[#316A7E] rtl:-scale-x-100 inline-block" />
               </Link>
             </div>
 
-            <div className="grid grid-cols-2 gap-2">
+            <div className="space-y-1.5">
               {t.servicesPage.servicesList.slice(0, 4).map((d) => (
                 <Link
                   key={d.id}
                   href={`/services#${d.slug}`}
                   onClick={onClose}
-                  className="p-2.5 rounded-[2px] bg-[#FFFFFF]/70 border border-[#092948]/10 hover:border-[#316A7E]/40 hover:bg-[#FFFFFF] text-[0.6875rem] text-[#092948] font-medium leading-tight transition-all flex items-center justify-between group shadow-2xs"
+                  className="px-3 py-2 rounded-[2px] bg-[#FFFFFF]/70 border border-[#092948]/10 hover:border-[#316A7E]/40 hover:bg-[#FFFFFF] text-xs text-[#092948] font-medium leading-normal transition-all flex items-center justify-between group shadow-2xs"
                 >
-                  <span className="truncate">{d.name}</span>
-                  <ArrowRight className="w-2.5 h-2.5 text-[#316A7E] opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0 ms-1 rtl:-scale-x-100" />
+                  <span className="line-clamp-1">{d.name}</span>
+                  <ArrowRight className="w-3 h-3 text-[#316A7E] opacity-60 group-hover:opacity-100 transition-opacity flex-shrink-0 ms-2 rtl:-scale-x-100" />
                 </Link>
               ))}
             </div>
@@ -227,8 +228,8 @@ export default function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuP
           </div>
         </div>
 
-        {/* Section 4: Bottom Footer (Inquiries & Geographic Hubs) */}
-        <div className="px-6 py-4 border-t border-[#092948]/12 bg-[#F9F1E7] sticky bottom-0 z-20 space-y-1.5 text-xs">
+        {/* Section 4: Bottom Footer (Inquiries & Geographic Hubs) with Safe-Area Padding */}
+        <div className="px-6 pt-4 pb-6 sm:pb-4 border-t border-[#092948]/12 bg-[#F9F1E7] sticky bottom-0 z-20 space-y-1.5 text-xs">
           <div className="flex items-center justify-between">
             <span className="text-[0.625rem] font-caps-label text-[#316A7E] tracking-[0.2em] uppercase font-semibold">
               {isArabic ? "الاتصال المباشر" : "Direct Inquiries"}
@@ -242,10 +243,9 @@ export default function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuP
           <a
             href={`mailto:${COMPANY.contact.email}`}
             className="text-xs text-[#092948] font-medium hover:text-[#316A7E] underline decoration-[#092948]/30 underline-offset-4 transition-colors flex items-center gap-1.5 pt-0.5"
-            dir="ltr"
           >
             <Mail className="w-3.5 h-3.5 text-[#316A7E]" />
-            <span>{COMPANY.contact.email}</span>
+            <bdi dir="ltr">{COMPANY.contact.email}</bdi>
           </a>
         </div>
       </div>

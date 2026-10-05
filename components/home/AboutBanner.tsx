@@ -17,7 +17,7 @@ export default function AboutBanner() {
         <div className="bg-[#F9F1E7] rounded-[4px] p-4 sm:p-8 md:p-14 border border-[#092948]/12 shadow-xs">
           {/* Top Text Row */}
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-8 pb-4 sm:pb-8 md:pb-10">
-            <div className="space-y-2 sm:space-y-3 max-w-2xl">
+            <div className="space-y-2 sm:space-y-3 max-w-2xl text-start">
               <div className="inline-block px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#FFFFFF] border border-[#092948]/10 mb-1.5 sm:mb-2">
                 <p className="font-caps-label text-[#316A7E] text-[0.68rem] sm:text-[0.72rem] tracking-[0.2em] uppercase font-semibold">
                   {t.home.aboutBanner.label}
@@ -25,7 +25,7 @@ export default function AboutBanner() {
               </div>
               <h2
                 id="about-banner-heading"
-                className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-[#092948] font-normal leading-[1.1]"
+                className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-[#092948] font-normal leading-[1.1] text-start"
               >
                 {isArabic ? (
                   <>
@@ -43,11 +43,11 @@ export default function AboutBanner() {
               </h2>
             </div>
 
-            <div className="max-w-lg space-y-3 sm:space-y-4">
-              <p className="text-xs sm:text-sm md:text-base text-[#000000]/80 leading-relaxed font-normal">
+            <div className="max-w-lg space-y-3 sm:space-y-4 text-start">
+              <p className="text-xs sm:text-sm md:text-base text-[#000000]/80 leading-relaxed font-normal text-start">
                 {t.home.aboutBanner.paragraph}
               </p>
-              <p className={`text-[0.7rem] sm:text-xs md:text-sm text-[#316A7E] font-medium ${isArabic ? "" : "italic"}`}>
+              <p className={`text-[0.7rem] sm:text-xs md:text-sm text-[#316A7E] font-medium text-start ${isArabic ? "" : "italic"}`}>
                 &ldquo;{t.home.aboutBanner.quote}&rdquo;
               </p>
               <div>

@@ -20,10 +20,10 @@ export default function ContactBand() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-16 items-center">
           {/* Column 1: Heading + CTA (cols 1-7) */}
-          <div className="lg:col-span-7 space-y-4 sm:space-y-8">
+          <div className="lg:col-span-7 space-y-4 sm:space-y-8 text-start">
             <h2
               id="contact-band-title"
-              className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.12] sm:leading-[1.05] tracking-tight text-[#F9F1E7]"
+              className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.12] sm:leading-[1.05] tracking-tight rtl:tracking-normal text-[#F9F1E7] text-start"
             >
               {isArabic ? (
                 <>
@@ -40,7 +40,7 @@ export default function ContactBand() {
               )}
             </h2>
 
-            <p className="text-xs sm:text-base md:text-lg text-[#F9F1E7]/80 leading-relaxed max-w-xl">
+            <p className="text-xs sm:text-base md:text-lg text-[#F9F1E7]/80 leading-relaxed max-w-xl text-start">
               {t.home.contactBand.description}
             </p>
 
@@ -58,8 +58,8 @@ export default function ContactBand() {
           </div>
 
           {/* Column 2: Pillars (cols 8-12) */}
-          <div className="lg:col-span-5 pt-5 sm:pt-8 border-t border-[rgba(249,241,231,0.2)] lg:pt-0 lg:border-t-0 lg:ps-10 lg:border-s lg:border-[rgba(249,241,231,0.2)]">
-            <div className="space-y-2 sm:space-y-4">
+          <div className="lg:col-span-5 pt-5 sm:pt-8 border-t border-[rgba(249,241,231,0.2)] lg:pt-0 lg:border-t-0 lg:ps-10 lg:border-s lg:border-[rgba(249,241,231,0.2)] text-start">
+            <div className="space-y-2 sm:space-y-4 text-start">
               <p className="text-[0.6875rem] sm:text-xs uppercase tracking-[0.25em] text-[#619AAA] font-medium">
                 {isArabic ? "الركائز الأساسية" : "Core Philosophy"}
               </p>

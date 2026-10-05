@@ -56,26 +56,19 @@ export default function EditorialBlock({
           </div>
         )}
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           {/* Column 1: Display Heading (cols 1-6) */}
           <div className="lg:col-span-6">
-            <h2 className="font-display-hero text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#092948] leading-[1.1] sm:leading-[1.05] tracking-tight">
+            <h2 className="font-display-hero text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-[#092948] leading-[1.1] sm:leading-[1.05] tracking-tight text-start">
               {headingContent}
             </h2>
           </div>
 
-          {/* Column 2: Paragraph with hairline vertical rule (cols 7-12) */}
-          <div className="lg:col-span-6 lg:ps-10 relative">
-            {/* Hairline vertical rule: positioned at start boundary */}
-            <div
-              className="hidden lg:block absolute inset-inline-start-0 top-1 bottom-1 w-[1px] bg-[#092948]/20"
-              aria-hidden="true"
-            />
-
-            <div className="space-y-4 sm:space-y-6">
-              <p className="text-base sm:text-lg md:text-xl text-[#092948] font-normal leading-relaxed max-w-[55ch]">
-                {paragraph}
-              </p>
+          {/* Column 2: Paragraph & Actions (cols 7-12) */}
+          <div className="lg:col-span-6 space-y-4 sm:space-y-6">
+            <p className="text-base sm:text-lg md:text-xl text-[#092948] font-normal leading-relaxed max-w-[55ch] text-start">
+              {paragraph}
+            </p>
 
               {ctaText && ctaHref && (
                 <div className="pt-2">
@@ -84,7 +77,6 @@ export default function EditorialBlock({
                   </Button>
                 </div>
               )}
-            </div>
           </div>
         </div>
       </div>

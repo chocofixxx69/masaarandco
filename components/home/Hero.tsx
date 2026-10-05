@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { ArrowUpRight, ArrowUpLeft, ArrowRight } from "lucide-react";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 
 export default function Hero() {
@@ -11,7 +11,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative w-full min-h-[100svh] bg-[#FFFFFF] text-[#092948] overflow-hidden flex flex-col justify-between"
+      className="relative w-full min-h-[100svh] lg:h-screen lg:min-h-[720px] bg-[#FFFFFF] text-[#092948] overflow-hidden flex flex-col justify-between"
       aria-label="Hero Section"
     >
       {/* Realistic Riyadh Sky & Terrace Panoramic Background */}
@@ -49,9 +49,9 @@ export default function Hero() {
       <div className="pt-20 sm:pt-24 md:pt-24 lg:pt-28" />
 
       {/* Main Content Area */}
-      <div className="relative z-20 max-w-[1440px] w-full mx-auto px-5 sm:px-6 md:px-10 lg:px-16 flex-1 flex flex-col justify-start md:justify-center pb-6 sm:pb-8 md:pb-0">
+      <div className="relative z-20 max-w-[1440px] w-full mx-auto px-5 sm:px-6 md:px-10 lg:px-16 flex-1 flex flex-col justify-start md:justify-center items-start pb-6 sm:pb-8 md:pb-0">
         {/* Brand Narrative Lockup: Editorial Typography */}
-        <div className="w-full md:max-w-[62%] lg:max-w-[56%] xl:max-w-[52%] space-y-3 sm:space-y-4 md:space-y-5 lg:space-y-6 pt-1 sm:pt-0 rtl:text-right">
+        <div className="w-full md:max-w-[62%] lg:max-w-[56%] xl:max-w-[52%] space-y-3 sm:space-y-4 md:space-y-5 lg:space-y-6 pt-1 sm:pt-0 text-start">
           {/* Top Micro-label with Subtle Rule Line */}
           <div className="flex items-center gap-3 w-full">
             <div className="inline-flex items-center gap-2 flex-shrink-0">
@@ -64,7 +64,7 @@ export default function Hero() {
           </div>
 
           {/* Large Editorial Headline */}
-          <h1 className="font-serif text-[#092948] text-[2rem] sm:text-4xl md:text-5xl lg:text-[4.25rem] xl:text-[4.75rem] font-normal tracking-tight leading-[1.08] sm:leading-[1.12]">
+          <h1 className="font-serif text-[#092948] text-[2rem] sm:text-4xl md:text-5xl lg:text-[4.25rem] xl:text-[4.75rem] font-normal tracking-tight rtl:tracking-normal leading-[1.08] sm:leading-[1.12] rtl:leading-[1.25] text-start">
             {t.home.hero.headlineLine1}
             <br />
             {t.home.hero.headlineLine2}{" "}
@@ -82,19 +82,23 @@ export default function Hero() {
           </p>
 
           {/* High-Trust Narrative Copy */}
-          <p className="text-[0.8125rem] sm:text-[0.9375rem] md:text-base lg:text-lg text-[#092948]/85 font-normal leading-relaxed max-w-[46ch]">
+          <p className="text-[0.8125rem] sm:text-[0.9375rem] md:text-base lg:text-lg text-[#092948]/85 font-normal leading-relaxed max-w-[46ch] rtl:max-w-[54ch] text-start">
             {t.home.hero.subheading}
           </p>
 
           {/* Action CTAs */}
-          <div className="pt-1.5 sm:pt-3 flex flex-wrap sm:flex-nowrap items-center gap-3 sm:gap-6 md:gap-8">
+          <div className="pt-1.5 sm:pt-3 flex flex-wrap sm:flex-nowrap items-center gap-3 sm:gap-6 md:gap-8 justify-start w-full">
             {/* Primary Filled Navy Pill Button */}
             <Link
               href="/work"
               className="group inline-flex items-center gap-2 sm:gap-2.5 rounded-full bg-[#092948] hover:bg-[#316A7E] px-5 sm:px-7 md:px-8 py-3 sm:py-3.5 md:py-4 text-xs sm:text-sm md:text-[0.9375rem] font-semibold text-[#FFFFFF] shadow-sm transition-all duration-200 focus-ring-light active:scale-[0.98] whitespace-nowrap min-h-[44px]"
             >
               <span className="w-4 h-4 sm:w-5 sm:h-5 rounded-full border border-white/80 flex items-center justify-center p-0.5 group-hover:scale-110 transition-transform flex-shrink-0">
-                <ArrowUpRight className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 stroke-[2.5] rtl:-scale-x-100" />
+                {isArabic ? (
+                  <ArrowUpLeft className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 stroke-[2.5]" />
+                ) : (
+                  <ArrowUpRight className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 stroke-[2.5]" />
+                )}
               </span>
               <span className="tracking-wider uppercase">{t.home.hero.ctaSecondary}</span>
             </Link>

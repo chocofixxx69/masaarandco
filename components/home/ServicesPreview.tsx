@@ -18,8 +18,8 @@ export default function ServicesPreview() {
     >
       <div className="max-w-[1440px] mx-auto px-5 sm:px-6 md:px-10 lg:px-16">
         {/* Section Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-8 pb-6 sm:pb-10">
-          <div className="max-w-3xl">
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4 sm:gap-8 pb-6 sm:pb-10 text-start">
+          <div className="max-w-3xl text-start">
             <div className="inline-block px-3.5 py-1.5 rounded-full bg-[#F9F1E7] border border-[#092948]/10 mb-3">
               <p className="font-caps-label text-[#316A7E] text-[0.72rem] tracking-[0.2em] uppercase font-semibold">
                 {t.home.servicesPreview.label}
@@ -27,7 +27,7 @@ export default function ServicesPreview() {
             </div>
             <h2
               id="services-preview-title"
-              className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#092948] font-normal leading-[1.1] sm:leading-[1.05]"
+              className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#092948] font-normal leading-[1.1] sm:leading-[1.05] text-start"
             >
               {isArabic ? (
                 <>
@@ -45,8 +45,8 @@ export default function ServicesPreview() {
             </h2>
           </div>
 
-          <div className="max-w-md space-y-3 sm:space-y-4">
-            <p className="text-sm sm:text-base text-[#000000]/80 leading-relaxed font-normal">
+          <div className="max-w-md space-y-3 sm:space-y-4 text-start">
+            <p className="text-sm sm:text-base text-[#000000]/80 leading-relaxed font-normal text-start">
               {t.home.servicesPreview.description}
             </p>
             <div>
@@ -61,15 +61,15 @@ export default function ServicesPreview() {
           </div>
         </div>
 
-        {/* Core Focus Pills Bar in Cream Box: 2-col on mobile saves vertical space */}
-        <div className="mb-6 sm:mb-12 p-3.5 sm:p-6 bg-[#F9F1E7] border border-[#092948]/12 rounded-[4px] shadow-xs grid grid-cols-2 md:grid-cols-4 gap-2.5 sm:gap-4">
+        {/* Core Focus Pills Bar in Cream Box: 1-col on mobile, 2-col on sm, 4-col on md */}
+        <div className="mb-6 sm:mb-12 p-4 sm:p-6 bg-[#F9F1E7] border border-[#092948]/12 rounded-[4px] shadow-xs grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
           {t.servicesPage.coreFocus.pillars.map((focus) => (
-            <div key={focus.name} className="space-y-0.5 sm:space-y-1">
-              <span className="font-caps-label text-[#092948] text-[0.6875rem] sm:text-[0.7rem] font-semibold block">
+            <div key={focus.name} className="space-y-1 text-start">
+              <span className="font-caps-label text-[#092948] text-xs font-semibold block">
                 {focus.name}
               </span>
-              <p className="text-[0.6875rem] sm:text-xs text-[#000000]/70 truncate">
-                {focus.items ? focus.items.slice(0, 3).join(" • ") : focus.tagline}...
+              <p className="text-xs text-[#000000]/70 leading-relaxed">
+                {focus.tagline || (focus.items ? focus.items.slice(0, 3).join(" • ") : "")}
               </p>
             </div>
           ))}
@@ -89,7 +89,7 @@ export default function ServicesPreview() {
 
         {/* Bottom Banner in Cream Box */}
         <div className="mt-8 sm:mt-14 p-4 sm:p-8 bg-[#F9F1E7] border border-[#092948]/12 rounded-[4px] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-xs">
-          <p className="text-sm text-[#092948]/90">
+          <p className="text-sm text-[#092948]/90 text-start">
             <strong className="font-semibold text-[#092948]">
               {t.servicesPage.customCallout.heading}
             </strong>{" "}

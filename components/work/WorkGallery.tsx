@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, X, CheckCircle, LayoutGrid, Columns } from "lucide-react";
+import { ArrowUpRight, ArrowUpLeft, X, CheckCircle } from "lucide-react";
 import { ProjectItem, PROJECTS } from "@/content/projects";
 import EmptyState from "@/components/ui/EmptyState";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
@@ -12,7 +12,6 @@ export default function WorkGallery() {
   const { t, isArabic } = useTranslation();
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
   const [activeProject, setActiveProject] = useState<ProjectItem | null>(null);
-  const [gridCols, setGridCols] = useState<2 | 3>(2);
 
   const categories = [
     { key: "All", label: isArabic ? "الكل" : "All" },
@@ -51,52 +50,26 @@ export default function WorkGallery() {
 
   return (
     <div>
-      {/* Category Filter Pills & Grid Toggle Bar */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 mb-6 sm:mb-10 pb-4 sm:pb-6 border-b border-[#092948]/15">
-        <div className="flex flex-wrap items-center gap-1.5 sm:gap-2" role="tablist" aria-label="Project Categories">
-          {categories.map((cat) => {
-            const isActive = selectedCategory === cat.key;
-            return (
-              <button
-                key={cat.key}
-                role="tab"
-                aria-selected={isActive}
-                onClick={() => setSelectedCategory(cat.key)}
-                className={`rounded-full px-3 sm:px-4 py-1.5 sm:py-2 text-[0.6875rem] sm:text-xs uppercase tracking-wider font-medium transition-all duration-200 cursor-pointer min-h-[34px] sm:min-h-[38px] ${
-                  isActive
-                    ? "bg-[#092948] text-[#FFFFFF] shadow-sm"
-                    : "bg-[#F9F1E7] text-[#092948] hover:bg-[#092948] hover:text-[#FFFFFF] border border-[#092948]/15"
-                }`}
-              >
-                {cat.label}
-              </button>
-            );
-          })}
-        </div>
-
-        {/* View Layout Density Toggle (Desktop) */}
-        <div className="hidden lg:flex items-center gap-1 border border-[#092948]/15 rounded-full p-1 bg-[#F9F1E7] self-start sm:self-auto">
-          <button
-            type="button"
-            onClick={() => setGridCols(2)}
-            title={isArabic ? "عرض عمودين" : "2 Columns View"}
-            className={`p-1.5 rounded-full transition-colors cursor-pointer ${
-              gridCols === 2 ? "bg-[#092948] text-[#F9F1E7]" : "text-[#092948]/60 hover:text-[#092948]"
-            }`}
-          >
-            <Columns className="w-3.5 h-3.5" />
-          </button>
-          <button
-            type="button"
-            onClick={() => setGridCols(3)}
-            title={isArabic ? "عرض ٣ أعمدة" : "3 Columns View"}
-            className={`p-1.5 rounded-full transition-colors cursor-pointer ${
-              gridCols === 3 ? "bg-[#092948] text-[#F9F1E7]" : "text-[#092948]/60 hover:text-[#092948]"
-            }`}
-          >
-            <LayoutGrid className="w-3.5 h-3.5" />
-          </button>
-        </div>
+      {/* Category Filter Pills Bar: smooth scroll on mobile, flex-wrap on sm+ */}
+      <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar sm:flex-wrap mb-6 sm:mb-10 pb-3 sm:pb-6 border-b border-[#092948]/15" role="tablist" aria-label="Project Categories">
+        {categories.map((cat) => {
+          const isActive = selectedCategory === cat.key;
+          return (
+            <button
+              key={cat.key}
+              role="tab"
+              aria-selected={isActive}
+              onClick={() => setSelectedCategory(cat.key)}
+              className={`flex-shrink-0 whitespace-nowrap rounded-full px-3.5 sm:px-4 py-1.5 sm:py-2 text-[0.6875rem] sm:text-xs uppercase tracking-wider font-medium transition-all duration-200 cursor-pointer min-h-[36px] sm:min-h-[38px] ${
+                isActive
+                  ? "bg-[#092948] text-[#FFFFFF] shadow-sm"
+                  : "bg-[#F9F1E7] text-[#092948] hover:bg-[#092948] hover:text-[#FFFFFF] border border-[#092948]/15"
+              }`}
+            >
+              {cat.label}
+            </button>
+          );
+        })}
       </div>
 
       {/* Empty State check */}
@@ -112,12 +85,8 @@ export default function WorkGallery() {
           actionHref="/contact"
         />
       ) : (
-        /* Perfectly Balanced, Equal Grid with Identical Heights & Baseline Alignment */
-        <div
-          className={`grid grid-cols-1 ${
-            gridCols === 2 ? "md:grid-cols-2 gap-4 sm:gap-8 lg:gap-12" : "md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
-          } items-stretch`}
-        >
+        /* Standard 3-Column Work Gallery Grid (as in Image 2) */
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 items-stretch">
           {filteredProjects.map((project) => {
             const localized = getLocalizedProject(project);
             return (
@@ -137,7 +106,11 @@ export default function WorkGallery() {
                   />
                   <div className="absolute inset-0 bg-[#092948]/0 group-hover:bg-[#092948]/10 transition-colors duration-300 pointer-events-none" />
                   <div className="absolute top-3 right-3 rtl:right-auto rtl:left-3 sm:top-4 sm:right-4 rtl:sm:right-auto rtl:sm:left-4 w-7 h-7 sm:w-9 sm:h-9 rounded-full bg-[#FFFFFF]/90 text-[#092948] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
-                    <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2] rtl:-scale-x-100" />
+                    {isArabic ? (
+                      <ArrowUpLeft className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2]" />
+                    ) : (
+                      <ArrowUpRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2]" />
+                    )}
                   </div>
                 </div>
 
@@ -157,11 +130,18 @@ export default function WorkGallery() {
 
                     {/* Title & Action Arrow Row */}
                     <div className="flex items-start justify-between gap-2.5 sm:gap-3">
-                      <h3 className="font-serif text-lg sm:text-2xl lg:text-3xl text-[#092948] font-normal group-hover:underline decoration-[#316A7E] underline-offset-4 leading-snug">
+                      <h3
+                        className="font-serif text-lg sm:text-2xl lg:text-3xl text-[#092948] font-normal group-hover:underline decoration-[#316A7E] underline-offset-4 leading-snug text-start"
+                        dir={isArabic ? "rtl" : "ltr"}
+                      >
                         {localized.title}
                       </h3>
                       <span className="w-6 h-6 sm:w-7 sm:h-7 flex-shrink-0 rounded-full border border-[#092948]/30 flex items-center justify-center text-[#092948] group-hover:bg-[#092948] group-hover:text-[#F9F1E7] group-hover:border-[#092948] transition-all duration-200 mt-0.5 sm:mt-1">
-                        <ArrowUpRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[2] rtl:-scale-x-100" />
+                        {isArabic ? (
+                          <ArrowUpLeft className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[2]" />
+                        ) : (
+                          <ArrowUpRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 stroke-[2]" />
+                        )}
                       </span>
                     </div>
 

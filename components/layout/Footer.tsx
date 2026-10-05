@@ -91,10 +91,9 @@ export default function Footer() {
             </p>
             <a
               href={`mailto:${COMPANY.contact.email}`}
-              className="text-xs sm:text-sm font-medium text-[#F9F1E7] hover:text-[#619AAA] underline decoration-[#619AAA]/50 underline-offset-4 transition-colors block mb-3 sm:mb-4"
-              dir="ltr"
+              className="text-xs sm:text-sm font-medium text-[#F9F1E7] hover:text-[#619AAA] underline decoration-[#619AAA]/50 underline-offset-4 transition-colors block mb-3 sm:mb-4 text-start"
             >
-              {COMPANY.contact.email}
+              <bdi dir="ltr">{COMPANY.contact.email}</bdi>
             </a>
             <div className="pt-1 sm:pt-2">
               <span className="text-[0.6875rem] sm:text-xs uppercase tracking-[0.2em] text-[#619AAA] font-medium block">

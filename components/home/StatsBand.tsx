@@ -42,11 +42,11 @@ export default function StatsBand() {
             <div className="lg:col-span-8 grid grid-cols-2 sm:grid-cols-4 gap-x-4 sm:gap-x-6 gap-y-4 sm:gap-y-6 sm:gap-4 sm:divide-x rtl:sm:divide-x-reverse divide-[#092948]/15 pt-1 sm:pt-0">
               {t.home.stats.items.map((stat, i) => (
                 <div key={i} className={`${i > 0 ? "sm:ps-6" : ""}`}>
-                  <p className="font-caps-label text-[#316A7E] text-[0.625rem] sm:text-[0.65rem] tracking-[0.18em] uppercase mb-0.5 sm:mb-1">
+                  <p className="font-caps-label text-[#316A7E] text-[0.625rem] sm:text-[0.65rem] tracking-[0.18em] uppercase mb-0.5 sm:mb-1 text-start">
                     {stat.label}
                   </p>
-                  <p className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#092948] font-normal tracking-tight" dir="ltr">
-                    {stat.value}
+                  <p className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#092948] font-normal tracking-tight text-start">
+                    <span dir="ltr" className="inline-block">{stat.value}</span>
                   </p>
                 </div>
               ))}

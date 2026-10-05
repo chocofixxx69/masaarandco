@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { ArrowRight } from "lucide-react";
 import MasaarLogo from "@/components/ui/MasaarLogo";
 import MobileMenu from "./MobileMenu";
 import LanguageToggle from "@/components/ui/LanguageToggle";
@@ -44,47 +45,53 @@ export default function Header() {
 
           {/* Desktop Navigation ≥1024px */}
           <nav
-            className="hidden lg:flex items-center space-x-6 xl:space-x-8 rtl:space-x-reverse"
+            className="hidden lg:flex items-center gap-6 xl:gap-8"
             aria-label="Main Navigation"
           >
-            {t.nav.items.slice(0, 4).map((item) => {
-              const isActive = pathname === item.href;
-              return (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  aria-current={isActive ? "page" : undefined}
-                  className={`relative text-[0.9375rem] font-medium tracking-[0.02em] transition-colors duration-200 py-1 focus-ring-light ${
-                    isActive ? "text-[#092948]" : "text-[#092948]/75 hover:text-[#092948]"
-                  }`}
-                >
-                  {item.label}
-                  {isActive && (
-                    <span
-                    className="absolute bottom-0 inset-x-0 h-[1.5px] bg-[#316A7E] transition-all"
-                    aria-hidden="true"
-                  />
-                  )}
-                </Link>
-              );
-            })}
+            <div className="flex items-center gap-6 xl:gap-8">
+              {t.nav.items.slice(0, 4).map((item) => {
+                const isActive = pathname === item.href;
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    aria-current={isActive ? "page" : undefined}
+                    className={`relative text-[0.9375rem] font-medium tracking-[0.02em] transition-colors duration-200 py-1.5 focus-ring-light whitespace-nowrap ${
+                      isActive ? "text-[#092948]" : "text-[#092948]/75 hover:text-[#092948]"
+                    }`}
+                  >
+                    {item.label}
+                    {isActive && (
+                      <span
+                        className="absolute bottom-0 inset-x-0 h-[1.5px] bg-[#316A7E] transition-all"
+                        aria-hidden="true"
+                      />
+                    )}
+                  </Link>
+                );
+              })}
+            </div>
 
-            {/* Language Toggle Desktop */}
-            <LanguageToggle variant="desktop" />
+            <div className="h-4 w-[1px] bg-[#092948]/15 flex-shrink-0" aria-hidden="true" />
 
-            {/* Contact as single outlined pill with cream background & dark border & arrow */}
-            <Link
-              href="/contact"
-              aria-current={pathname === "/contact" ? "page" : undefined}
-              className={`inline-flex items-center gap-2 rounded-full border px-5 py-2 text-[0.9375rem] font-medium transition-all duration-200 focus-ring-light ${
-                pathname === "/contact"
-                  ? "border-[#092948] bg-[#092948] text-[#FFFFFF]"
-                  : "border-[#092948]/30 bg-[#F9F1E7] text-[#092948] hover:bg-[#092948] hover:text-[#FFFFFF]"
-              }`}
-            >
-              <span>{t.nav.letsTalk}</span>
-              <span className="text-xs transition-transform rtl:rotate-180">→</span>
-            </Link>
+            <div className="flex items-center gap-4 xl:gap-5 flex-shrink-0">
+              {/* Language Toggle Desktop */}
+              <LanguageToggle variant="desktop" />
+
+              {/* Contact as single outlined pill with cream background & dark border & arrow */}
+              <Link
+                href="/contact"
+                aria-current={pathname === "/contact" ? "page" : undefined}
+                className={`group inline-flex items-center gap-2 rounded-full border px-5 py-2 text-[0.9375rem] font-medium transition-all duration-200 focus-ring-light whitespace-nowrap ${
+                  pathname === "/contact"
+                    ? "border-[#092948] bg-[#092948] text-[#FFFFFF]"
+                    : "border-[#092948]/30 bg-[#F9F1E7] text-[#092948] hover:bg-[#092948] hover:text-[#FFFFFF]"
+                }`}
+              >
+                <span>{t.nav.letsTalk}</span>
+                <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5 rtl:group-hover:-translate-x-0.5 rtl:-scale-x-100 flex-shrink-0" />
+              </Link>
+            </div>
           </nav>
 
           {/* Tablet/Mobile <1024: Language Toggle + Premium Architectural Menu Button */}
