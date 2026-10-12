@@ -62,16 +62,16 @@ export default function AboutBanner() {
             </div>
           </div>
 
-          {/* Architectural Canopy Image Banner */}
+          {/* Leader Pathway Motion Image Banner */}
           <div className="relative w-full h-[140px] sm:h-[240px] md:h-[360px] lg:h-[380px] overflow-hidden rounded-[2px] border border-[#092948]/15 mt-2 sm:mt-4">
             <Image
-              src="/images/arch-curved-concrete.jpg"
-              alt="Masaar architectural canopy symbolizing clarity of form and pathway"
+              src="/images/about-leader-pathway.jpg"
+              alt="Masaar team and leadership moving forward with purpose"
               fill
-              sizes="100vw"
-              className="object-cover object-[center_35%]"
+              sizes="(max-width: 768px) 100vw, (max-width: 1440px) 90vw, 1300px"
+              priority={false}
+              className="object-cover object-[center_54%]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#092948]/25 via-transparent to-transparent pointer-events-none" />
           </div>
         </div>
       </div>
