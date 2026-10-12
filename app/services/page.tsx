@@ -10,6 +10,40 @@ import { useTranslation } from "@/lib/i18n/LanguageContext";
 
 export default function ServicesPage() {
   const { t, isArabic } = useTranslation();
+  const [activeSlug, setActiveSlug] = React.useState<string>(SERVICES[0]?.slug || "");
+
+  // Scrollspy to track which service is currently visible in viewport
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 180;
+      for (let i = SERVICES.length - 1; i >= 0; i--) {
+        const service = SERVICES[i];
+        const el = document.getElementById(service.slug);
+        if (el) {
+          if (scrollPosition >= el.offsetTop) {
+            setActiveSlug(service.slug);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToService = (slug: string, e: React.MouseEvent) => {
+    e.preventDefault();
+    const el = document.getElementById(slug);
+    if (el) {
+      const yOffset = -110;
+      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+      setActiveSlug(slug);
+      window.history.pushState(null, "", `#${slug}`);
+    }
+  };
 
   return (
     <div className="bg-[#FFFFFF] min-h-screen pt-28 sm:pt-32 md:pt-36 pb-10 sm:pb-24">
@@ -92,41 +126,71 @@ export default function ServicesPage() {
             </span>
           </div>
           <div className="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar text-xs">
-            {t.servicesPage.servicesList.map((s) => (
-              <a
-                key={s.id}
-                href={`#${s.slug}`}
-                className="flex-shrink-0 px-3.5 py-1.5 rounded-full bg-[#FFFFFF] border border-[#092948]/15 text-[#092948] font-medium hover:bg-[#092948] hover:text-[#FFFFFF] transition-colors whitespace-nowrap min-h-[34px] inline-flex items-center gap-2"
-              >
-                <span className="font-mono text-[#316A7E] font-semibold" dir="ltr">{s.number}</span>
-                <span>{s.name}</span>
-              </a>
-            ))}
-          </div>
-        </div>
-
-        {/* Content with Desktop Sticky Navigation Index */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-          {/* Desktop Sticky Index (cols 1-3) */}
-          <aside className="hidden lg:block lg:col-span-3 sticky top-32 space-y-6">
-            <p className="font-caps-label text-[#316A7E] text-xs">
-              {isArabic ? "فهرس الحلول (١٠)" : "Index of Solutions (10)"}
-            </p>
-            <nav className="space-y-1.5" aria-label="Services Navigation">
-              {t.servicesPage.servicesList.map((s) => (
+            {t.servicesPage.servicesList.map((s) => {
+              const isActive = s.slug === activeSlug;
+              return (
                 <a
                   key={s.id}
                   href={`#${s.slug}`}
-                  className="group flex items-baseline gap-2.5 text-xs text-[#092948]/75 hover:text-[#092948] transition-colors py-1 border-s-2 border-transparent hover:border-[#092948] ps-2.5"
+                  onClick={(e) => scrollToService(s.slug, e)}
+                  className={`flex-shrink-0 px-3.5 py-1.5 rounded-full border transition-all whitespace-nowrap min-h-[34px] inline-flex items-center gap-2 ${
+                    isActive
+                      ? "bg-[#092948] border-[#092948] text-[#FFFFFF] shadow-xs"
+                      : "bg-[#FFFFFF] border-[#092948]/15 text-[#092948] hover:bg-[#092948] hover:text-[#FFFFFF]"
+                  }`}
                 >
-                  <span className="font-mono text-[0.7rem] text-[#316A7E] font-semibold" dir="ltr">
+                  <span
+                    className={`font-mono font-semibold ${
+                      isActive ? "text-[#619AAA]" : "text-[#316A7E]"
+                    }`}
+                    dir="ltr"
+                  >
                     {s.number}
                   </span>
-                  <span className="font-medium group-hover:underline underline-offset-4 truncate">
-                    {s.name}
-                  </span>
+                  <span>{s.name}</span>
                 </a>
-              ))}
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Content with Desktop Sticky Fixed Navigation Index */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
+          {/* Desktop Fixed Sticky Index (cols 1-3) */}
+          <aside className="hidden lg:block lg:col-span-3 sticky top-28 xl:top-32 self-start max-h-[calc(100vh-8.5rem)] overflow-y-auto no-scrollbar space-y-6 pe-2">
+            <p className="font-caps-label text-[#316A7E] text-xs">
+              {isArabic ? "فهرس الحلول (١٠)" : "Index of Solutions (10)"}
+            </p>
+            <nav className="space-y-1" aria-label="Services Navigation">
+              {t.servicesPage.servicesList.map((s) => {
+                const isActive = s.slug === activeSlug;
+                return (
+                  <a
+                    key={s.id}
+                    href={`#${s.slug}`}
+                    onClick={(e) => scrollToService(s.slug, e)}
+                    className={`group flex items-baseline gap-2.5 text-xs py-1.5 px-2 rounded-[2px] transition-all border-s-2 ${
+                      isActive
+                        ? "border-[#092948] bg-[#092948]/5 text-[#092948] font-semibold"
+                        : "border-transparent text-[#092948]/70 hover:text-[#092948] hover:border-[#092948]/30 hover:bg-[#092948]/[0.02]"
+                    }`}
+                  >
+                    <span
+                      className={`font-mono text-[0.7rem] transition-colors ${
+                        isActive
+                          ? "text-[#316A7E] font-bold"
+                          : "text-[#316A7E]/75 font-semibold group-hover:text-[#316A7E]"
+                      }`}
+                      dir="ltr"
+                    >
+                      {s.number}
+                    </span>
+                    <span className="truncate">
+                      {s.name}
+                    </span>
+                  </a>
+                );
+              })}
             </nav>
 
             <div className="pt-6 border-t border-[#092948]/15">
