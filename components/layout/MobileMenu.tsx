@@ -193,7 +193,7 @@ export default function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuP
                 onClick={onClose}
                 className="inline-flex items-center gap-1 text-[0.6875rem] text-[#092948]/60 hover:text-[#092948] font-medium transition-colors"
               >
-                <span>{isArabic ? "كافة الحلول (١٢)" : "All 12"}</span>
+                <span>{isArabic ? "كافة الحلول (١٠)" : "All 10"}</span>
                 <ArrowRight className="w-3 h-3 text-[#316A7E] rtl:-scale-x-100 inline-block" />
               </Link>
             </div>

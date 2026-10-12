@@ -73,7 +73,7 @@ export default function Footer() {
                     href="/services"
                     className="text-xs sm:text-sm text-[#619AAA] hover:underline transition-colors font-medium flex items-center gap-1"
                   >
-                    <span>{isArabic ? "عرض كافة الحلول (١٢)" : "View All 12"}</span>
+                    <span>{isArabic ? "عرض كافة الحلول (١٠)" : "View All 10"}</span>
                     <span className="rtl:-scale-x-100 inline-block">↗</span>
                   </Link>
                 </li>

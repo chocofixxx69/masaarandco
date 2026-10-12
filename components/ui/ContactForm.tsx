@@ -16,7 +16,7 @@ export default function ContactForm({ initialService = "" }: ContactFormProps) {
     name: "",
     email: "",
     company: "",
-    service: initialService || (isArabic ? "أتمتة الأعمال وسير العمل" : "Business Automation"),
+    service: initialService || (isArabic ? "أتمتة العمليات التشغيلية" : "Business Process Automation"),
     budget: "",
     message: "",
     hp_field: "",
@@ -314,32 +314,6 @@ export default function ContactForm({ initialService = "" }: ContactFormProps) {
         </div>
       </div>
 
-      {/* Row 3: Estimated Scope / Budget */}
-      <div>
-        <label
-          htmlFor="budget"
-          className="block text-[0.6875rem] sm:text-xs uppercase tracking-[0.15em] font-medium text-[#092948] mb-1.5 sm:mb-2"
-        >
-          {t.contactPage.form.budgetLabel}{" "}
-          <span className="text-[0.6875rem] sm:text-xs text-[#092948]/50 lowercase">
-            {isArabic ? "(اختياري)" : "(optional)"}
-          </span>
-        </label>
-        <select
-          id="budget"
-          name="budget"
-          value={formData.budget}
-          onChange={handleChange}
-          className="w-full px-3.5 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base text-[#000000] bg-[#F9F1E7]/20 border border-[#092948]/20 rounded-[2px] focus:outline-none focus:border-[#092948] focus:bg-[#FFFFFF] transition-colors"
-        >
-          <option value="">{t.contactPage.form.budgetPlaceholder}</option>
-          {t.contactPage.form.budgetOptions.map((opt) => (
-            <option key={opt.value} value={opt.value}>
-              {opt.label}
-            </option>
-          ))}
-        </select>
-      </div>
 
       {/* Row 4: Message */}
       <div>

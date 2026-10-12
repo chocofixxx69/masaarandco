@@ -52,15 +52,12 @@ export default function Hero() {
       <div className="relative z-20 max-w-[1440px] w-full mx-auto px-5 sm:px-6 md:px-10 lg:px-16 flex-1 flex flex-col justify-start md:justify-start lg:justify-center items-start pt-3 sm:pt-4 md:pt-6 lg:pt-0 pb-6 sm:pb-8 md:pb-0">
         {/* Brand Narrative Lockup: Editorial Typography */}
         <div className="w-full md:max-w-[62%] lg:max-w-[56%] xl:max-w-[52%] space-y-2.5 sm:space-y-3 md:space-y-3.5 lg:space-y-4 xl:space-y-6 pt-1 sm:pt-0 text-start">
-          {/* Top Micro-label with Subtle Rule Line */}
-          <div className="flex items-center gap-3 w-full">
-            <div className="inline-flex items-center gap-2 flex-shrink-0">
-              <span className="w-2 h-2 rounded-full bg-[#316A7E]" />
-              <p className="font-caps-label text-[#316A7E] text-[0.68rem] sm:text-[0.75rem] md:text-[0.8rem] tracking-[0.22em] uppercase font-semibold">
-                {t.home.hero.pill}
-              </p>
-            </div>
-            <div className="h-[1px] bg-[#092948]/20 flex-1 max-w-[80px] sm:max-w-[160px] md:max-w-[220px]" />
+          {/* Top Micro-label */}
+          <div className="inline-flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-[#316A7E]" />
+            <p className="font-caps-label text-[#316A7E] text-[0.68rem] sm:text-[0.75rem] md:text-[0.8rem] tracking-[0.22em] uppercase font-semibold">
+              {t.home.hero.pill}
+            </p>
           </div>
 
           {/* Large Editorial Headline */}

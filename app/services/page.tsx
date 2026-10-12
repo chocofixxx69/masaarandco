@@ -110,7 +110,7 @@ export default function ServicesPage() {
           {/* Desktop Sticky Index (cols 1-3) */}
           <aside className="hidden lg:block lg:col-span-3 sticky top-32 space-y-6">
             <p className="font-caps-label text-[#316A7E] text-xs">
-              {isArabic ? "فهرس الحلول (١٢)" : "Index of Solutions (12)"}
+              {isArabic ? "فهرس الحلول (١٠)" : "Index of Solutions (10)"}
             </p>
             <nav className="space-y-1.5" aria-label="Services Navigation">
               {t.servicesPage.servicesList.map((s) => (

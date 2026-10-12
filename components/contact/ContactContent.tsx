@@ -88,26 +88,6 @@ export default function ContactContent() {
               </div>
             </div>
 
-            {/* Regional Offices List: 3-col subgrid on mobile, 1-col on lg */}
-            <div className="pt-4 sm:pt-6 border-t border-[#092948]/15 space-y-2 sm:space-y-4">
-              <h3 className="font-caps-label text-[#316A7E] text-[0.6875rem] sm:text-xs">
-                {t.contactPage.directChannels.hubsLabel}
-              </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-2.5 sm:gap-4">
-                {t.contactPage.directChannels.locations.map((loc) => (
-                  <div
-                    key={loc.city}
-                    className="p-3 sm:p-4 border-s-2 sm:border-s-4 border-[#316A7E] bg-[#F9F1E7] rounded-[2px] shadow-xs text-start"
-                  >
-                    <p className="font-serif text-base sm:text-lg text-[#092948] font-medium">{loc.city}</p>
-                    <p className="text-xs sm:text-xs text-[#000000]/75 mt-1 leading-relaxed">{loc.address}</p>
-                    <p className="text-[0.625rem] sm:text-[0.6875rem] uppercase tracking-wider text-[#316A7E] mt-1 font-semibold">
-                      {loc.country}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
 
           {/* Interactive Contact Form (cols 6-12) */}
