@@ -86,7 +86,7 @@ export const COMPANY = {
     },
   ],
   contact: {
-    email: "contact@masaar.co",
+    email: "masaarandco@gmail.com",
     phone: "+966 (11) 482-9100",
     locations: [
       { city: "Riyadh", address: "King Fahd Road, Al Olaya District", country: "Saudi Arabia" },

@@ -7,7 +7,7 @@ export const siteConfig = {
   ogImage: "https://masaar.co/brand/masaar-logo.jpg",
   description:
     "Masaar & Co. is a technology and solutions company focused on turning ideas into practical, real-world solutions. Ideas, engineered into existence.",
-  contactEmail: "contact@masaar.co",
+  contactEmail: "masaarandco@gmail.com",
 };
 
 export function constructMetadata({
@@ -69,7 +69,7 @@ export function getOrganizationJsonLd() {
       "A technology company building AI solutions, modern products and intelligent systems for businesses, institutions and communities.",
     contactPoint: {
       "@type": "ContactPoint",
-      email: "contact@masaar.co",
+      email: "masaarandco@gmail.com",
       contactType: "customer service",
       availableLanguage: ["English", "Arabic"],
     },
