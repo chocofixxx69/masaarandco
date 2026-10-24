@@ -34,7 +34,7 @@ export default function Hero() {
       <div className="hidden md:block absolute right-0 rtl:right-auto rtl:left-0 sm:right-2 rtl:sm:left-2 md:right-4 rtl:md:left-4 lg:right-6 rtl:lg:left-6 xl:right-10 rtl:xl:left-10 2xl:right-16 rtl:2xl:left-16 bottom-0 top-16 md:top-20 lg:top-24 xl:top-28 w-[46%] lg:w-[45%] xl:w-[43%] max-w-[560px] lg:max-w-[660px] xl:max-w-[740px] z-10 pointer-events-none select-none overflow-hidden">
         <div className="relative w-full h-full flex items-end justify-end rtl:justify-start transition-all duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] scale-100 opacity-100 translate-y-0">
           <Image
-            src="/images/hero-leader-laptop.png"
+            src="/images/hero-leader-laptop-v2.png"
             alt={t.home.hero.imageAlt}
             fill
             priority
@@ -116,7 +116,7 @@ export default function Hero() {
       <div className="md:hidden absolute inset-x-0 bottom-0 pointer-events-none select-none overflow-hidden h-[44svh] sm:h-[48svh] max-h-[440px] flex items-end justify-center z-10">
         <div className="relative w-full h-full max-w-[360px] sm:max-w-[420px] flex items-end justify-center transition-all duration-[800ms] ease-out opacity-100 translate-y-0 scale-100">
           <Image
-            src="/images/hero-leader-laptop.png"
+            src="/images/hero-leader-laptop-v2.png"
             alt={t.home.hero.imageAlt}
             fill
             priority
