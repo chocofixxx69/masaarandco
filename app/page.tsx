@@ -3,7 +3,6 @@
 import React from "react";
 import Hero from "@/components/home/Hero";
 import EditorialBlock from "@/components/ui/EditorialBlock";
-import StatsBand from "@/components/home/StatsBand";
 import ServicesPreview from "@/components/home/ServicesPreview";
 import ApproachSection from "@/components/home/ApproachSection";
 import FeaturedWork from "@/components/home/FeaturedWork";
@@ -38,12 +37,7 @@ export default function HomePage() {
         />
       </Reveal>
 
-      {/* D. Stats Band (Ref. 3 & PRD §5) */}
-      <Reveal>
-        <StatsBand />
-      </Reveal>
-
-      {/* E. Services Preview (P0) */}
+      {/* C. Services Preview (P0) */}
       <Reveal>
         <ServicesPreview />
       </Reveal>

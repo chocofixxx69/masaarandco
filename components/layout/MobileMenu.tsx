@@ -230,14 +230,10 @@ export default function MobileMenu({ isOpen, onClose, currentPath }: MobileMenuP
 
         {/* Section 4: Bottom Footer (Inquiries & Geographic Hubs) with Safe-Area Padding */}
         <div className="px-6 pt-4 pb-6 sm:pb-4 border-t border-[#092948]/12 bg-[#F9F1E7] sticky bottom-0 z-20 space-y-1.5 text-xs">
-          <div className="flex items-center justify-between">
+          <div>
             <span className="text-[0.625rem] font-caps-label text-[#316A7E] tracking-[0.2em] uppercase font-semibold">
               {isArabic ? "الاتصال المباشر" : "Direct Inquiries"}
             </span>
-            <div className="flex items-center gap-1.5 text-[0.6875rem] text-[#092948]/70">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#1E6B4F]" />
-              <span>{isArabic ? "الرياض · دبي · لندن" : "Riyadh · Dubai · London"}</span>
-            </div>
           </div>
 
           <a

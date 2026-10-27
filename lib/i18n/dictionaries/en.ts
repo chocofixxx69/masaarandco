@@ -95,7 +95,7 @@ export const enDictionary: TranslationDictionary = {
       title: "Durable Systems Engineered for Demanding Clients",
       italicWord: "Demanding",
       description:
-        "A selection of recent platforms spanning ambient intelligence in healthcare, higher-education analytics, and multimodal transportation infrastructure.",
+        "A selection of recent platforms spanning return-journey mobility networks, ambient clinical documentation, and enterprise cloud & AI infrastructure.",
       viewAll: "Explore All Case Studies",
     },
     aboutBanner: {
@@ -151,8 +151,8 @@ export const enDictionary: TranslationDictionary = {
       ],
     },
     presence: {
-      label: "Masaar & Co. Presence",
-      title: "Operating Across Riyadh, Dubai, and London",
+      label: "Masaar & Co. Ethos",
+      title: "Technology & Solutions Built for the Real World",
       description:
         "Guiding organizations through the pathway of engineering tangible, useful, and durable technology.",
       cta: "Connect With Our Leadership",
@@ -336,12 +336,11 @@ export const enDictionary: TranslationDictionary = {
       title: "Durable Systems Engineered for Real-World Demands",
       italicWord: "Real-World",
       description:
-        "A curated selection of our deployments across ambient artificial intelligence, university platforms, and logistics infrastructure.",
+        "A curated selection of our deployments across return-journey mobility networks, ambient healthcare intelligence, autonomous business growth, and enterprise systems.",
     },
     categories: {
       all: "All",
       aiHealthcare: "AI Healthcare",
-      education: "Education",
       platform: "Platform",
       aiSystems: "AI Systems",
       digitalTransformation: "Digital Transformation",
@@ -349,92 +348,158 @@ export const enDictionary: TranslationDictionary = {
     },
     projects: [
       {
-        id: "maddy-voice",
-        slug: "maddy-voice",
-        title: "Maddy Voice",
-        category: "AI Healthcare",
-        categoryKey: "aiHealthcare",
-        client: "Maddy Health Systems",
-        year: "2025",
-        oneLiner: "AI voice consultation & automated clinical documentation.",
-        summary:
-          "A clinical-grade ambient voice assistant that captures doctor-patient dialogues in real time, generates structured electronic health record (EHR) notes, and cuts clinician documentation time by 68%.",
-        challenge:
-          "Physicians were spending up to 3.5 hours every evening transcribing audio notes into legacy electronic health records, accelerating practitioner burnout and creating clinical backlog.",
-        solution:
-          "Masaar engineered an ambient speech recognition engine with custom medical vocabularies and multi-speaker separation, creating structured SOAP notes directly into hospital records within seconds.",
-        metrics: [
-          "68% Reduction in documentation time",
-          "99.4% Accuracy on specialized medical terminology",
-          "SOC-2 Type II & HIPAA certified architecture",
-        ],
-        stack: ["Next.js", "Python FastAudio", "Whisper ASR", "Med-LLM Fine-tuned", "PostgreSQL", "WebSockets"],
-      },
-      {
-        id: "gradeflow",
-        slug: "gradeflow",
-        title: "GradeFlow",
-        category: "Education",
-        categoryKey: "education",
-        client: "Academic Analytics Consortium",
-        year: "2024",
-        oneLiner: "Academic platform for VTU students with result insights.",
-        summary:
-          "An intelligent academic analytics platform serving over 180,000 university students, enabling real-time semester result parsing, GPA projection algorithms, and personalized curriculum suggestions.",
-        challenge:
-          "Legacy university portals suffered catastrophic crashes during result release days, leaving students unable to access grades or understand semester credit prerequisites.",
-        solution:
-          "Constructed a high-concurrency serverless result ingestion pipeline that serves 12,000 requests per second with sub-50ms latency, enriched with GPA predictive algorithms.",
-        metrics: [
-          "180,000+ Active student users",
-          "12,000 req/sec Peak throughput",
-          "99.98% System availability during release peaks",
-        ],
-        stack: ["React", "TypeScript", "FastAPI", "Redis Cache", "ClickHouse Analytics", "AWS Lambda"],
-      },
-      {
-        id: "portlogix",
-        slug: "portlogix",
-        title: "PortLogix Intelligence",
+        id: "returngo",
+        slug: "returngo",
+        title: "ReturnGo",
         category: "Platform",
         categoryKey: "platform",
-        client: "Global Maritime Logistics",
-        year: "2024",
-        oneLiner: "Maritime container tracking & predictive berth scheduling engine.",
+        client: "ReturnGo Mobility Network",
+        year: "2025",
+        oneLiner: "Return-journey matching, passenger seat-sharing & vehicle rental platform.",
         summary:
-          "An automated port operations platform coordinating vessel arrivals, predictive berth allocation, and multimodal container tracking across three international terminals.",
+          "An intelligent regional mobility and vehicle rental platform that matches empty return-leg taxi journeys with waiting passengers, reducing deadhead miles while supporting full-taxi bookings, seat-sharing, and verified self-drive or chauffeur rentals.",
         challenge:
-          "Vessels experienced unpredictable waiting times of 14 to 36 hours outside berths due to static scheduling spreadsheets and uncoordinated customs clearance pipelines.",
+          "Most regional taxi trips involve empty return legs where drivers travel back with zero passengers, driving up fuel waste and passenger fares while depressing driver income.",
         solution:
-          "Engineered a real-time AIS telemetry tracking platform combined with an automated berth allocation algorithm that forecasts container crane availability and clears customs queues dynamically.",
+          "Engineered an algorithmic return-journey matching engine that scores route compatibility, unifying full taxi booking, seat-sharing, and independent vehicle rentals on a single coastal corridor with verified driver and owner workflows.",
         metrics: [
-          "38% Reduction in container dwell time",
-          "2.4M TEUs Tracked annually",
-          "$4.2M Annual fuel & demurrage savings",
+          "40%+ Reduction in empty return-trip miles",
+          "Verified multi-tier driver & vehicle onboarding",
+          "Sub-minute journey publication to booking matching",
         ],
-        stack: ["Go", "Next.js", "Apache Kafka", "PostGIS", "Docker Swarm", "TimescaleDB"],
+        stack: ["Next.js", "TypeScript", "Tailwind CSS", "Zod", "Lucide React", "Node.js"],
       },
       {
-        id: "autofin-ai",
-        slug: "autofin-ai",
-        title: "AutoFin AI Engine",
+        id: "vox-ai",
+        slug: "vox-ai",
+        title: "VOX AI",
+        category: "AI Healthcare",
+        categoryKey: "aiHealthcare",
+        client: "Omnimed Clinical Systems",
+        year: "2025",
+        oneLiner: "AI-powered ambient clinical documentation and consultation report generation.",
+        summary:
+          "An ambient clinical documentation suite that captures doctor-patient dialogues in real time, converts consultation audio into structured medical records with Gemini AI, generates downloadable clinical PDF reports, and triggers automated n8n EHR workflows.",
+        challenge:
+          "Clinicians spend hours every day transcribing consultations and manually inputting diagnostic findings into electronic records, increasing burnout and delaying patient report generation.",
+        solution:
+          "Engineered a real-time speech-to-text pipeline integrated with Google Gemini AI for clinical entity extraction, automated structured PDF report synthesis, and Supabase storage with webhook orchestration.",
+        metrics: [
+          "Instant clinical transcription & structured extraction",
+          "Automated PDF consultation report generation",
+          "Real-time communication with Socket.IO & n8n webhooks",
+        ],
+        stack: ["Python Flask", "Google Gemini AI", "Supabase", "React", "Socket.IO", "n8n Webhooks", "ReportLab"],
+      },
+      {
+        id: "smartlinesystems",
+        slug: "smartlinesystems",
+        title: "SmartLineSystems",
+        category: "Digital Transformation",
+        categoryKey: "digitalTransformation",
+        client: "Smartline Systems Pvt. Ltd.",
+        year: "2025",
+        oneLiner: "Cloud computing, AI SaaS applications & enterprise operations platform.",
+        summary:
+          "An enterprise technology platform uniting cloud infrastructure, AI-driven SaaS applications, automated cloud bookkeeping, and IoT connectivity for growing organizations.",
+        challenge:
+          "Growing enterprises struggle with fragmented operational systems, juggling siloed bookkeeping, disconnected client records, and slow legacy computing infrastructure without unified intelligence.",
+        solution:
+          "Architected a cloud-native platform integrating SaaS application modules with AI, automated real-time bookkeeping, and IoT device telemetry into a centralized, scalable operational dashboard.",
+        metrics: [
+          "Unified Cloud, AI & IoT operational stack",
+          "Automated real-time cloud bookkeeping pipelines",
+          "Cloud-native high-availability architecture",
+        ],
+        stack: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Cloud Native", "IoT Telemetry"],
+      },
+      {
+        id: "leadsense",
+        slug: "leadsense",
+        title: "LeadSense",
         category: "AI Systems",
         categoryKey: "aiSystems",
-        client: "Crescent Capital Partners",
+        client: "LeadSense Autonomous Systems",
         year: "2025",
-        oneLiner: "Automated underwriting & financial statement extraction.",
+        oneLiner: "Autonomous business growth, digital presence audit & website generation platform.",
         summary:
-          "A document extraction and risk underwriting pipeline parsing multi-page corporate financial statements, tax filings, and bank statements with cryptographic audit trails.",
+          "A production-oriented autonomous business growth engine that discovers local businesses, audits digital presence across 11 measured dimensions, deterministically generates responsive websites, and provisions tenant-isolated RAG chatbots.",
         challenge:
-          "Private credit analysts took 4 to 6 business days manually reviewing unstandardized audited financial statements from SME loan applicants.",
+          "Small and regional businesses lack modern digital presence or conversational customer tools, while manual agency web design and chatbot configuration remain slow and prohibitively expensive.",
         solution:
-          "Developed an OCR and specialized LLM financial extraction pipeline that identifies ledger discrepancies, recalculates debt-service coverage ratios, and compiles credit memos in minutes.",
+          "Built an end-to-end autonomous discovery pipeline via Overpass QL/OSM, automated 11-stage audit engine with Playwright, deterministic template-based web generator, and tenant-isolated pgvector RAG chatbot provisioning.",
         metrics: [
-          "82% Decrease in underwriting cycle time",
-          "0 Error rate on balance sheet reconciliation",
-          "Over $340M in loans processed",
+          "11 Deterministic audit dimensions evaluated per business",
+          "Fully automated responsive web & RAG chatbot provisioning",
+          "Tenant-isolated vector retrieval with strict SSRF bounds",
         ],
-        stack: ["Python", "PyTorch", "LayoutLMv3", "FastAPI", "React", "PostgreSQL"],
+        stack: ["Python FastAPI", "Next.js", "pgvector", "PostgreSQL", "Playwright", "Tailwind CSS", "OpenStreetMap"],
+      },
+      {
+        id: "leadscout",
+        slug: "leadscout",
+        title: "LeadScout",
+        category: "Business Automation",
+        categoryKey: "businessAutomation",
+        client: "Commercial Sales Operations",
+        year: "2025",
+        oneLiner: "Universal local business lead discovery, website auditing & outreach engine.",
+        summary:
+          "A high-precision sales intelligence and scraping engine that extracts local business prospects across cities and niches, audits web capabilities, deduplicates records via SHA-256 hashes, and orchestrates personalized cold outreach sequences.",
+        challenge:
+          "B2B outreach teams waste over 60% of their operational time manually browsing business directories, extracting unverified emails, and evaluating whether prospects have modern web infrastructure.",
+        solution:
+          "Engineered an automated crawler and intelligence pipeline utilizing Playwright, Google Maps/OSM extraction, contact discovery, 11-dimension opportunity scoring, and automated n8n email outreach.",
+        metrics: [
+          "Zero-duplicate ingestion with SHA-256 deduplication",
+          "Automated multi-field extraction (phone, email, social, rating)",
+          "Evidence-cited cold outreach copy generation",
+        ],
+        stack: ["Python", "Playwright", "n8n", "PostgreSQL", "Google Sheets API", "LLM Outreach"],
+      },
+      {
+        id: "lyfodaily",
+        slug: "lyfodaily",
+        title: "LyfoDaily",
+        category: "AI Healthcare",
+        categoryKey: "aiHealthcare",
+        client: "Clinical & Practice Healthcare Network",
+        year: "2025",
+        oneLiner: "Production-grade multilingual AI voice receptionist & scheduling agent for clinics.",
+        summary:
+          "A multi-tenant conversational voice receptionist platform purpose-built for healthcare that answers incoming clinic calls in real time, natively detects and speaks 20+ languages, schedules appointments directly into clinic calendars, and hands off gracefully when human intervention is needed.",
+        challenge:
+          "Medical clinics and multi-location practices face high call drop rates, missed patient appointments, and multilingual communication friction that generic IVR phone trees cannot resolve.",
+        solution:
+          "Engineered a sub-second streaming voice pipeline using LiveKit with real-time intent parsing, dynamic doctor slot booking directly in the practice database, and bring-your-own-AI provider routing with zero lock-in.",
+        metrics: [
+          "Native support for 20+ languages with mid-call switching",
+          "Direct two-way calendar slot booking in real time",
+          "Sub-second streaming audio latency via LiveKit & WebRTC",
+        ],
+        stack: ["LiveKit", "React", "Python FastAPI", "WebRTC", "Docker", "PostgreSQL"],
+      },
+      {
+        id: "internal-management",
+        slug: "internal-management",
+        title: "Internal Management",
+        category: "Business Automation",
+        categoryKey: "businessAutomation",
+        client: "Masaar & Co. Operations",
+        year: "2025",
+        oneLiner: "Unified operations, client workflow orchestration & internal management portal.",
+        summary:
+          "A centralized enterprise administration and operational management console integrating client engagement pipelines, project milestone delivery tracking, role-based access control, and internal workflow orchestration.",
+        challenge:
+          "Coordinating multidisciplinary engineering sprints, client deliverables, and organizational assets across disparate tools created coordination friction and manual reporting overhead.",
+        solution:
+          "Deployed an integrated internal management dashboard consolidating pipeline telemetry, resource allocation, approval pipelines, and tenant administration into a unified, secure control interface.",
+        metrics: [
+          "Centralized operational dashboard for all active workstreams",
+          "Role-based access control & granular audit logging",
+          "Real-time delivery milestone and resource tracking",
+        ],
+        stack: ["Next.js", "TypeScript", "PostgreSQL", "Tailwind CSS", "Docker", "REST/GraphQL API"],
       },
     ],
     modal: {
@@ -459,15 +524,6 @@ export const enDictionary: TranslationDictionary = {
       description:
         "All communications are handled under strict non-disclosure. Technical directors review and respond to each inquiry within one business day.",
       emailLabel: "General & Technical Inquiries",
-      phoneLabel: "Telephone",
-      hoursLabel: "Operating Hours",
-      hoursValue: "Sunday – Thursday, 09:00 – 18:00 AST",
-      hubsLabel: "Regional Hubs",
-      locations: [
-        { city: "Riyadh", address: "King Fahd Road, Al Olaya District", country: "Saudi Arabia" },
-        { city: "Dubai", address: "DIFC Gate Precinct 4", country: "United Arab Emirates" },
-        { city: "London", address: "1 Finsbury Circus", country: "United Kingdom" },
-      ],
     },
     form: {
       fullNameLabel: "Your Full Name",
@@ -484,7 +540,7 @@ export const enDictionary: TranslationDictionary = {
       submitBtn: "Transmit Inquiry",
       submittingBtn: "Transmitting...",
       successTitle: "Inquiry Dispatched Successfully",
-      successMessage: "Thank you for reaching out. Our engineering directors in Riyadh and Dubai will review your brief and respond within one business day.",
+      successMessage: "Thank you for reaching out. Our engineering directors will review your brief and respond within one business day.",
       sendAnother: "Submit Another Inquiry",
       budgetOptions: [
         { value: "<$25k", label: "Under $25,000 (Scoped pilot / review)" },
@@ -513,10 +569,15 @@ export const enDictionary: TranslationDictionary = {
     statement: "People · Ideas · Technology · A brighter tomorrow",
     navigationLabel: "Navigation",
     disciplinesLabel: "Disciplines",
-    contactLabel: "Contact",
+    contactLabel: "Direct Inquiry",
     allRightsReserved: "All rights reserved.",
     architecturalStandard: "Engineered with architectural discipline.",
-    hours: "Sun – Thu: 09:00 – 18:00 AST",
+    ethosLabel: "Studio Purpose",
+    ethosText: "The name Masaar (مسار) signifies direction and purpose. We engineer purposeful software, intelligent systems, and automation tailored for real-world impact.",
+    explorePractices: "Explore All Practices",
+    privacyPolicy: "Privacy Policy",
+    termsOfEngagement: "Terms of Engagement",
+    securityStandards: "Security Standards",
   },
   notFound: {
     badge: "404 — Pathway Not Found",

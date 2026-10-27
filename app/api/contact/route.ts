@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(
       {
         success: true,
-        message: `Thank you, ${validData.name}. Your inquiry has been registered with Masaar & Co. Our technology directors will respond within 24 hours.`,
+        message: `Thank you, ${validData.name}. Your inquiry has been registered with Masaar & Co. Our technology directors will review your brief and respond shortly.`,
       },
       { status: 200 }
     );

@@ -58,11 +58,6 @@ export interface ProjectItemTranslation {
   categoryKey: string;
 }
 
-export interface LocationTranslation {
-  city: string;
-  address: string;
-  country: string;
-}
 
 export interface TranslationDictionary {
   locale: Language;
@@ -231,11 +226,6 @@ export interface TranslationDictionary {
       title: string;
       description: string;
       emailLabel: string;
-      phoneLabel: string;
-      hoursLabel: string;
-      hoursValue: string;
-      hubsLabel: string;
-      locations: LocationTranslation[];
     };
     form: {
       fullNameLabel: string;
@@ -272,7 +262,12 @@ export interface TranslationDictionary {
     contactLabel: string;
     allRightsReserved: string;
     architecturalStandard: string;
-    hours: string;
+    ethosLabel: string;
+    ethosText: string;
+    explorePractices: string;
+    privacyPolicy: string;
+    termsOfEngagement: string;
+    securityStandards: string;
   };
   notFound: {
     badge: string;

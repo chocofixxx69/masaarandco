@@ -1,22 +1,35 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { ArrowUpRight, ArrowUpLeft, X, CheckCircle } from "lucide-react";
 import { ProjectItem, PROJECTS } from "@/content/projects";
 import EmptyState from "@/components/ui/EmptyState";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 
-export default function WorkGallery() {
+function WorkGalleryInner() {
   const { t, isArabic } = useTranslation();
+  const searchParams = useSearchParams();
+  const slugFromUrl = searchParams.get("project");
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
-  const [activeProject, setActiveProject] = useState<ProjectItem | null>(null);
+  const [manualActiveProject, setManualActiveProject] = useState<ProjectItem | null | undefined>(undefined);
+
+  const activeProject =
+    manualActiveProject !== undefined
+      ? manualActiveProject
+      : slugFromUrl
+      ? PROJECTS.find((p) => p.slug === slugFromUrl || p.id === slugFromUrl) || null
+      : null;
+
+  const setActiveProject = (p: ProjectItem | null) => {
+    setManualActiveProject(p);
+  };
 
   const categories = [
     { key: "All", label: isArabic ? "الكل" : "All" },
     { key: "AI Healthcare", label: isArabic ? "الرعاية الصحية بالذكاء الاصطناعي" : "AI Healthcare" },
-    { key: "Education", label: isArabic ? "القطاع الأكاديمي" : "Education" },
     { key: "Platform", label: isArabic ? "المنصات الرقمية" : "Platform" },
     { key: "AI Systems", label: isArabic ? "أنظمة الذكاء الاصطناعي" : "AI Systems" },
     { key: "Digital Transformation", label: isArabic ? "التحول الرقمي" : "Digital Transformation" },
@@ -296,5 +309,13 @@ export default function WorkGallery() {
         </div>
       )}
     </div>
+  );
+}
+
+export default function WorkGallery() {
+  return (
+    <Suspense fallback={<div className="min-h-[400px] flex items-center justify-center text-xs font-mono text-[#092948]/50">Loading gallery...</div>}>
+      <WorkGalleryInner />
+    </Suspense>
   );
 }

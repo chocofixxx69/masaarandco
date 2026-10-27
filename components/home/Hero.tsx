@@ -18,7 +18,7 @@ export default function Hero() {
       <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-hidden">
         <Image
           src="/images/hero-skyline-bg.jpg"
-          alt="Masaar & Co. Technology headquarters terrace overlooking the Riyadh skyline"
+          alt="Masaar & Co. Technology architectural studio terrace"
           fill
           priority
           quality={94}

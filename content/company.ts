@@ -87,12 +87,5 @@ export const COMPANY = {
   ],
   contact: {
     email: "masaarandco@gmail.com",
-    phone: "+966 (11) 482-9100",
-    locations: [
-      { city: "Riyadh", address: "King Fahd Road, Al Olaya District", country: "Saudi Arabia" },
-      { city: "Dubai", address: "DIFC Gate Precinct 4", country: "United Arab Emirates" },
-      { city: "London", address: "1 Finsbury Circus", country: "United Kingdom" },
-    ],
-    hours: "Sunday – Thursday, 09:00 – 18:00 AST",
   },
 };

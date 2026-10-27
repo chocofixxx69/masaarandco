@@ -4,7 +4,7 @@ import React from "react";
 import PageHeading from "@/components/ui/PageHeading";
 import ContactForm from "@/components/ui/ContactForm";
 import Reveal from "@/components/ui/Reveal";
-import { Mail, Phone, Clock } from "lucide-react";
+import { Mail } from "lucide-react";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 import { COMPANY } from "@/content/company";
 
@@ -40,51 +40,20 @@ export default function ContactContent() {
               <div className="space-y-2.5 sm:space-y-4">
                 <a
                   href={`mailto:${COMPANY.contact.email}`}
-                  className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-[#F9F1E7] border border-[#092948]/12 rounded-[4px] shadow-xs text-[#092948] hover:border-[#316A7E] hover:text-[#316A7E] transition-all group min-h-[44px] sm:min-h-[48px]"
+                  className="flex items-center gap-3 sm:gap-4 p-4 sm:p-5 bg-[#F9F1E7] border border-[#092948]/12 rounded-[4px] shadow-xs text-[#092948] hover:border-[#316A7E] hover:text-[#316A7E] transition-all group min-h-[48px]"
                 >
-                  <span className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-[#092948]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#092948] group-hover:text-[#FFFFFF] transition-all">
-                    <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  <span className="w-9 h-9 sm:w-11 sm:h-11 rounded-full border border-[#092948]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#092948] group-hover:text-[#FFFFFF] transition-all">
+                    <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
                   </span>
                   <div>
-                    <span className="text-[0.625rem] sm:text-[0.6875rem] font-caps-label text-[#316A7E] block">
+                    <span className="text-[0.625rem] sm:text-[0.6875rem] font-caps-label text-[#316A7E] block mb-0.5">
                       {t.contactPage.directChannels.emailLabel}
                     </span>
-                    <span className="text-xs sm:text-base font-medium break-all" dir="ltr">
+                    <span className="text-sm sm:text-lg font-medium break-all" dir="ltr">
                       {COMPANY.contact.email}
                     </span>
                   </div>
                 </a>
-
-                <a
-                  href={`tel:${COMPANY.contact.phone.replace(/[^0-9+]/g, "")}`}
-                  className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-[#F9F1E7] border border-[#092948]/12 rounded-[4px] shadow-xs text-[#092948] hover:border-[#316A7E] hover:text-[#316A7E] transition-all group min-h-[44px] sm:min-h-[48px]"
-                >
-                  <span className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-[#092948]/20 flex items-center justify-center flex-shrink-0 group-hover:bg-[#092948] group-hover:text-[#FFFFFF] transition-all">
-                    <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                  </span>
-                  <div>
-                    <span className="text-[0.625rem] sm:text-[0.6875rem] font-caps-label text-[#316A7E] block">
-                      {t.contactPage.directChannels.phoneLabel}
-                    </span>
-                    <span className="text-xs sm:text-base font-medium" dir="ltr">
-                      <bdi>{COMPANY.contact.phone}</bdi>
-                    </span>
-                  </div>
-                </a>
-
-                <div className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 bg-[#F9F1E7] border border-[#092948]/12 rounded-[4px] shadow-xs text-[#092948] min-h-[44px] sm:min-h-[48px]">
-                  <span className="w-8 h-8 sm:w-10 sm:h-10 rounded-full border border-[#092948]/20 flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                  </span>
-                  <div>
-                    <span className="text-[0.625rem] sm:text-[0.6875rem] font-caps-label text-[#316A7E] block">
-                      {t.contactPage.directChannels.hoursLabel}
-                    </span>
-                    <span className="text-[0.6875rem] sm:text-sm text-[#000000]/75">
-                      {t.contactPage.directChannels.hoursValue}
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
 

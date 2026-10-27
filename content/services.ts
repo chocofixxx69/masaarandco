@@ -112,7 +112,7 @@ export const SERVICES: ServiceItem[] = [
     tagline: "AI applications, chatbots, voice agents, and intelligent workflows.",
     summary:
       "AI applications, chatbots, voice agents, and intelligent workflows.",
-    image: "/images/project-maddy-voice.jpg",
+    image: "/images/project-vox-ai.jpg",
     imageAlt: "Intelligent voice assistant and AI solutions interface",
     scope: [
       "Custom AI applications",
@@ -138,7 +138,7 @@ export const SERVICES: ServiceItem[] = [
     tagline: "Business applications, enterprise software, and tailored digital solutions.",
     summary:
       "Business applications, enterprise software, and tailored digital solutions.",
-    image: "/images/project-omniconnect.jpg",
+    image: "/images/project-internal-management.png",
     imageAlt: "Enterprise software and custom digital solutions interface",
     scope: [
       "Enterprise architecture & design",
@@ -242,7 +242,7 @@ export const SERVICES: ServiceItem[] = [
     tagline: "Analytics dashboards, reporting systems, and data-driven insights.",
     summary:
       "Analytics dashboards, reporting systems, and data-driven insights.",
-    image: "/images/project-gradeflow.jpg",
+    image: "/images/project-smartlinesystems.jpg",
     imageAlt: "Analytics dashboard showing real-time metrics",
     scope: [
       "Real-time analytics dashboards",

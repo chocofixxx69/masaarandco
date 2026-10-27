@@ -77,7 +77,7 @@ export default function AboutPage() {
             </div>
             <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 text-[0.6875rem] sm:text-xs text-[#092948]/60 font-mono pt-0.5 sm:pt-1">
               <span>{isArabic ? "مسار وشركاه — الانضباط المعماري" : "MASAAR & CO. — ARCHITECTURAL DISCIPLINE"}</span>
-              <span>{isArabic ? "الرياض / دبي" : "EST. RIYADH / DUBAI"}</span>
+              <span>{isArabic ? "هندسة برمجية وتقنية" : "TECHNOLOGY & SOLUTIONS"}</span>
             </div>
           </div>
         </div>
