@@ -86,8 +86,8 @@ export const SERVICES: ServiceItem[] = [
     tagline: "Workflow automation, process optimization, and operational efficiency.",
     summary:
       "Workflow automation, process optimization, and operational efficiency.",
-    image: "/images/service-ai-solutions.jpg",
-    imageAlt: "Minimalist architectural curved ceiling representing efficient flow",
+    image: "/images/service-workflow-automation.jpg",
+    imageAlt: "Enterprise business process automation workflow builder and live execution telemetry",
     scope: [
       "Process analysis & mapping",
       "RPA & workflow automation",
@@ -164,8 +164,8 @@ export const SERVICES: ServiceItem[] = [
     tagline: "Corporate websites, web applications, and digital experiences.",
     summary:
       "Corporate websites, web applications, and digital experiences.",
-    image: "/images/hero-architecture.jpg",
-    imageAlt: "Architectural composition representing structured web design",
+    image: "/images/service-web-design.jpg",
+    imageAlt: "Modern responsive corporate web application design and multi-device showcase",
     scope: [
       "Corporate websites design",
       "Modern web applications build",
@@ -190,8 +190,8 @@ export const SERVICES: ServiceItem[] = [
     tagline: "Connecting platforms, business systems, databases, and third-party services.",
     summary:
       "Connecting platforms, business systems, databases, and third-party services.",
-    image: "/images/service-digital-trans.jpg",
-    imageAlt: "Modern architectural glass structure representing unified integration",
+    image: "/images/service-api-integration.jpg",
+    imageAlt: "Enterprise API management console, microservices latency telemetry, and database pipeline connectors",
     scope: [
       "Platform connectivity architecture",
       "Custom API engineering (REST/GraphQL)",
@@ -216,8 +216,8 @@ export const SERVICES: ServiceItem[] = [
     tagline: "Online stores, payment integration, and commerce platforms.",
     summary:
       "Online stores, payment integration, and commerce platforms.",
-    image: "/images/service-product-dev.jpg",
-    imageAlt: "Dynamic surface representing commercial velocity",
+    image: "/images/service-ecommerce.png",
+    imageAlt: "High-conversion modern luxury e-commerce platform storefront and instant checkout interface",
     scope: [
       "High-converting online stores",
       "Payment gateway integration",
@@ -268,8 +268,8 @@ export const SERVICES: ServiceItem[] = [
     tagline: "Cloud deployment, infrastructure management, CI/CD, and reliability.",
     summary:
       "Cloud deployment, infrastructure management, CI/CD, and reliability.",
-    image: "/images/arch-curved-concrete.jpg",
-    imageAlt: "Clean architectural geometry representing cloud stability",
+    image: "/images/service-cloud-devops.png",
+    imageAlt: "Multi-region cloud infrastructure, Kubernetes cluster orchestration, and automated CI/CD pipeline",
     scope: [
       "Multi-cloud deployment strategy",
       "Infrastructure management as Code",
@@ -294,8 +294,8 @@ export const SERVICES: ServiceItem[] = [
     tagline: "Product strategy, architecture, development, and ongoing enhancement.",
     summary:
       "Product strategy, architecture, development, and ongoing enhancement.",
-    image: "/images/service-product-dev.jpg",
-    imageAlt: "Bespoke craftsmanship visual representing digital product engineering",
+    image: "/images/service-product-engineering.png",
+    imageAlt: "Digital product engineering workbench with design system tokens and modular component architecture",
     scope: [
       "Product strategy & roadmap definition",
       "Modular digital architecture",
@@ -320,8 +320,8 @@ export const SERVICES: ServiceItem[] = [
     tagline: "Technology strategy, process redesign, and digital modernization.",
     summary:
       "Technology strategy, process redesign, and digital modernization.",
-    image: "/images/service-digital-trans.jpg",
-    imageAlt: "Corporate architectural perspective representing strategic clarity",
+    image: "/images/service-digital-transformation.png",
+    imageAlt: "Enterprise digital transformation advisory roadmap, strategic milestones, and modernization scorecard",
     scope: [
       "Enterprise technology strategy",
       "Operational process redesign",

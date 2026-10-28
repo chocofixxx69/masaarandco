@@ -154,8 +154,8 @@ export const PROJECTS: ProjectItem[] = [
     oneLiner: "Production-grade multilingual AI voice receptionist & scheduling agent for clinics.",
     summary:
       "A multi-tenant conversational voice receptionist platform purpose-built for healthcare that answers incoming clinic calls in real time, natively detects and speaks 20+ languages, schedules appointments directly into clinic calendars, and hands off gracefully when human intervention is needed.",
-    image: "/images/project-lyfodaily.jpg",
-    imageAlt: "LyfoDaily production-grade multilingual AI voice receptionist for healthcare practices",
+    image: "/images/project-lyfodaily-new.png",
+    imageAlt: "LyfoDaily production-grade multilingual AI voice receptionist and clinical appointment scheduler",
     featured: false,
     aspect: "16:10",
     metrics: [
