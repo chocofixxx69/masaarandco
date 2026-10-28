@@ -51,11 +51,29 @@ export const enDictionary: TranslationDictionary = {
     },
     stats: {
       movementText: ["Movement", "Builds", "Possibilities"],
+      bannerLabel: "Measurable Impact & Scope",
+      bannerTitle: "Movement Builds Possibilities",
       items: [
-        { value: "03", label: "Core Solution Practices" },
-        { value: "20+", label: "Clients & Partners" },
-        { value: "08", label: "Products Engineered" },
-        { value: "05", label: "Industries Served" },
+        {
+          value: "03",
+          label: "Core Solution Practices",
+          subtext: "Automation, intelligent systems & digital software",
+        },
+        {
+          value: "20+",
+          label: "Clients & Partners",
+          subtext: "Enterprises, institutions & ambitious organizations",
+        },
+        {
+          value: "08",
+          label: "Products Engineered",
+          subtext: "Production architectures deployed into active real-world operations",
+        },
+        {
+          value: "05",
+          label: "Industries Served",
+          subtext: "Healthcare, education, logistics, fintech & platforms",
+        },
       ],
     },
     servicesPreview: {

@@ -1,0 +1,55 @@
+{
+  "company": {
+    "name": "Masaar & Co.",
+    "legalName": "Masaar & Co. Technology Group",
+    "arabicName": "مسار",
+    "tagline": "Ideas, Engineered into Existence",
+    "heroPill": "Technology for what's next",
+    "brandStatement": "People · Ideas · Technology · A brighter tomorrow",
+    "motto": "We don’t just imagine what could exist. We engineer it into existence.",
+    "description": "Masaar & Co. is a technology and solutions company focused on turning ideas into practical, real-world solutions.",
+    "extendedBio": "We combine engineering, technology, design, and innovation to build digital products, intelligent systems, software, automation, infrastructure, and emerging technology solutions. Our approach is simple: understand the problem, find the right direction, and engineer a solution that works. We focus on building technology that is purposeful, reliable, scalable, and designed to create lasting value.",
+    "announcementBanner": "Now accepting Q2/Q3 enterprise architecture & automation engagements.",
+    "announcementEnabled": false
+  },
+  "contact": {
+    "email": "contact@masaar.co",
+    "phone": "+966 (11) 482-9100",
+    "hours": "Sunday – Thursday, 09:00 – 18:00 AST",
+    "locations": [
+      {
+        "city": "Riyadh",
+        "address": "King Fahd Road, Al Olaya District",
+        "country": "Saudi Arabia"
+      },
+      {
+        "city": "Dubai",
+        "address": "DIFC Gate Precinct 4",
+        "country": "United Arab Emirates"
+      },
+      {
+        "city": "London",
+        "address": "1 Finsbury Circus",
+        "country": "United Kingdom"
+      }
+    ]
+  },
+  "automation": {
+    "webhooksEnabled": true,
+    "webhookUrl": "",
+    "webhookSecret": "masaar_sec_2026",
+    "webhookEvents": [
+      "inquiry.created",
+      "inquiry.status_changed"
+    ],
+    "adminEmailAlerts": true,
+    "adminNotificationEmail": "leads@masaar.co",
+    "autoReplyEnabled": true,
+    "autoReplySubject": "Thank you for contacting Masaar & Co. — Inquiry Registered",
+    "autoReplyTemplate": "Dear {name},\n\nThank you for reaching out to Masaar & Co. regarding {service}. Your inquiry has been registered under reference #{id}.\n\nOur technology directorship team is reviewing your requirements and will contact you within 24 business hours.\n\nWarm regards,\nMasaar & Co. Technology Group\nRiyadh · Dubai · London",
+    "autoTagHighBudget": true,
+    "highBudgetThreshold": "$50,000+",
+    "lastTestedAt": "2026-10-12T10:49:01.230Z",
+    "lastTestStatus": "failed"
+  }
+}

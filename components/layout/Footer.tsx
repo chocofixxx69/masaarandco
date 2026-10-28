@@ -2,12 +2,18 @@
 
 import React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { COMPANY } from "@/content/company";
 import { useTranslation } from "@/lib/i18n/LanguageContext";
 
 export default function Footer() {
+  const pathname = usePathname();
   const { t, isArabic } = useTranslation();
   const currentYear = new Date().getFullYear();
+
+  if (pathname?.startsWith("/admin")) {
+    return null;
+  }
 
   return (
     <footer
@@ -138,6 +144,27 @@ export default function Footer() {
           <p>
             &copy; {currentYear} {t.brand.legalName}. {t.footer.allRightsReserved}
           </p>
+          <div className="flex flex-wrap items-center justify-center gap-x-3 sm:gap-x-4 gap-y-1.5 sm:gap-y-2">
+            <span className="hover:text-[#F9F1E7] cursor-pointer">
+              {t.footer.privacyPolicy || (isArabic ? "سياسة الخصوصية" : "Privacy Policy")}
+            </span>
+            <span className="text-[#F9F1E7]/30">·</span>
+            <span className="hover:text-[#F9F1E7] cursor-pointer">
+              {t.footer.termsOfEngagement || (isArabic ? "شروط الخدمة والتعاقد" : "Terms of Engagement")}
+            </span>
+            <span className="text-[#F9F1E7]/30">·</span>
+            <span className="hover:text-[#F9F1E7] cursor-pointer">
+              {t.footer.securityStandards || (isArabic ? "معايير الأمان والامتثال" : "Security Overview")}
+            </span>
+            <span className="text-[#F9F1E7]/30">·</span>
+            <Link
+              href="/admin"
+              className="text-[#619AAA] hover:text-[#FFFFFF] transition-colors font-medium flex items-center gap-1"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-[#1E6B4F] inline-block" />
+              {isArabic ? "لوحة الإدارة والأتمتة" : "Admin Console"}
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SkipLink from "@/components/layout/SkipLink";
+import AnnouncementBanner from "@/components/layout/AnnouncementBanner";
 import { LanguageProvider } from "@/lib/i18n/LanguageContext";
 
 const newsreader = Newsreader({
@@ -121,9 +122,10 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col bg-[#F9F1E7] text-[#000000] selection:bg-[#316A7E] selection:text-[#FFFFFF]">
         <LanguageProvider>
+          <AnnouncementBanner />
           <SkipLink />
           <Header />
-          <main id="main-content" className="flex-1">
+          <main id="main-content" className="flex-1 flex flex-col min-h-0">
             {children}
           </main>
           <Footer />

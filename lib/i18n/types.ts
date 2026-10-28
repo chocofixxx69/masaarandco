@@ -10,6 +10,7 @@ export interface NavItemTranslation {
 export interface StatItemTranslation {
   value: string;
   label: string;
+  subtext?: string;
 }
 
 export interface PillarTranslation {
@@ -102,6 +103,8 @@ export interface TranslationDictionary {
     };
     stats: {
       movementText: string[];
+      bannerLabel?: string;
+      bannerTitle?: string;
       items: StatItemTranslation[];
     };
     servicesPreview: {

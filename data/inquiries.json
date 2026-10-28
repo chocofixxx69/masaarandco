@@ -1,0 +1,125 @@
+[
+  {
+    "id": "inq_8093",
+    "createdAt": "2026-10-12T10:48:27.315Z",
+    "name": "Mohammed Al-Shehri",
+    "email": "m.shehri@neomtech.sa",
+    "company": "NEOM Smart Systems",
+    "service": "Business Automation",
+    "budget": ",000 - ,000",
+    "message": "Automated logistics clearance workflow integration test for regional operations.",
+    "status": "reviewing",
+    "priority": "normal",
+    "notes": "",
+    "automationLogs": [
+      {
+        "timestamp": "2026-10-12T10:48:27.316Z",
+        "action": "Inquiry Stored & Categorized",
+        "status": "success",
+        "detail": "Priority set to 'normal'. Service: Business Automation",
+        "durationMs": 4
+      },
+      {
+        "timestamp": "2026-10-12T10:48:27.316Z",
+        "action": "Webhook Skipped",
+        "status": "skipped",
+        "detail": "No Webhook URL configured in Automation Settings"
+      },
+      {
+        "timestamp": "2026-10-12T10:48:27.316Z",
+        "action": "Admin Email Alert",
+        "status": "success",
+        "detail": "Alert routed to leads@masaar.co for [NORMAL] lead.",
+        "durationMs": 12
+      },
+      {
+        "timestamp": "2026-10-12T10:48:27.316Z",
+        "action": "Customer Auto-Reply",
+        "status": "success",
+        "detail": "Confirmation dispatched to m.shehri@neomtech.sa (Ref #inq_8093). Subject: \"Thank you for contacting Masaar & Co. — Inquiry Registered\". Body snippet: \"Dear Mohammed Al-Shehri,\n\nThank you for ...\"",
+        "durationMs": 15
+      }
+    ]
+  },
+  {
+    "id": "inq_9401",
+    "createdAt": "2026-10-12T06:44:47.339Z",
+    "name": "Dr. Tariq Al-Mansoor",
+    "email": "tariq.mansoor@alman-health.sa",
+    "company": "Al-Manarah Healthcare Group",
+    "service": "AI & Intelligent Systems",
+    "budget": "$50,000 - $100,000",
+    "message": "Seeking ambient voice medical transcription architecture similar to Maddy Voice for our 4 outpatient clinics in Riyadh.",
+    "status": "reviewing",
+    "priority": "high",
+    "notes": "High value lead. Recommended immediate outreach by clinical solutions lead.",
+    "automationLogs": [
+      {
+        "timestamp": "2026-10-12T06:44:47.339Z",
+        "action": "Inquiry Stored",
+        "status": "success",
+        "detail": "Auto-tagged High Priority based on Enterprise budget."
+      },
+      {
+        "timestamp": "2026-10-12T06:44:47.539Z",
+        "action": "Admin Email Alert",
+        "status": "success",
+        "detail": "Dispatched to leads@masaar.co"
+      },
+      {
+        "timestamp": "2026-10-12T06:44:47.740Z",
+        "action": "Customer Auto-Reply",
+        "status": "success",
+        "detail": "Confirmation dispatched to tariq.mansoor@alman-health.sa"
+      }
+    ]
+  },
+  {
+    "id": "inq_8842",
+    "createdAt": "2026-10-11T10:44:47.340Z",
+    "name": "Sarah Jenkins",
+    "email": "s.jenkins@apexlogistics.ae",
+    "company": "Apex Global Logistics DIFC",
+    "service": "Business Automation",
+    "budget": "$25,000 - $50,000",
+    "message": "We need autonomous ERP and customs clearance workflow automation linking our Dubai and Rotterdam shipping lines.",
+    "status": "contacted",
+    "priority": "normal",
+    "notes": "Technical scoping call scheduled for Wednesday.",
+    "automationLogs": [
+      {
+        "timestamp": "2026-10-11T10:44:47.340Z",
+        "action": "Inquiry Stored",
+        "status": "success",
+        "detail": "Validated via Zod schema"
+      },
+      {
+        "timestamp": "2026-10-11T10:44:47.490Z",
+        "action": "Customer Auto-Reply",
+        "status": "success",
+        "detail": "Delivered to s.jenkins@apexlogistics.ae"
+      }
+    ]
+  },
+  {
+    "id": "inq_7729",
+    "createdAt": "2026-10-09T10:44:47.340Z",
+    "name": "Faisal Al-Otaibi",
+    "email": "faisal@tamweel-fintech.com",
+    "company": "Tamweel Financial Systems",
+    "service": "Software & Digital Products",
+    "budget": "$100,000+",
+    "message": "Requesting proposal for mobile banking customer onboarding portal with biometric verification and compliance check.",
+    "status": "contacted",
+    "priority": "high",
+    "notes": "NDA signed. Architecture roadmap doc shared.",
+    "automationLogs": [
+      {
+        "timestamp": "2026-10-09T10:44:47.340Z",
+        "action": "Inquiry Stored",
+        "status": "success",
+        "detail": "High Priority flag applied"
+      }
+    ]
+  }
+]

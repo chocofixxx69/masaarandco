@@ -26,6 +26,10 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  if (pathname?.startsWith("/admin")) {
+    return null;
+  }
+
   const isHomePage = pathname === "/";
   const headerBgClass = (!isHomePage || isScrolled)
     ? "bg-[#FFFFFF]/95 backdrop-blur-md border-b border-[#092948]/10 shadow-xs"
